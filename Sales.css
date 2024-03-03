@@ -144,7 +144,9 @@ main{
     gap: 1em;
     padding-bottom: 1em;
     margin: 0 1em 1em 1em;
+    font-size: 1.15em;
 }
+
 
 
 /* ------------------------------------------ SALES-TOP ------------------------------------------*/
@@ -157,7 +159,7 @@ main{
     font-size: 1.25em;
     border-radius: 15px 15px 0 0;
     background-color: #D2BBA3;
-    padding: 0.75em 0 0.75em 1em;
+    padding: 0.75em 0.75em 0.75em 1em;
     border: none;
     border-bottom: 3px solid #B8AA9C;
 }
@@ -167,31 +169,29 @@ main{
 .calender_wrapper {
     position: relative;
 }
-.calender_wrapper::before{
+/*.calender_wrapper::before{
     content: "";
     position: absolute;
-    margin-top: 0.6em;
-    margin-left: 0.6em;
+    margin-top: 0.55em;
+    margin-left: 0.55em;
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
     background-image: url(svg/calender.svg);
     cursor: pointer;
-}
+}*/
 .datepicker_input {
 	display:flex;
     align-items: center;
     justify-content: center;
-	border: none;
 	border-radius: 10px;
-	border: 1px solid transparent;
 	line-height: 1.5rem;
     font-family: ClassyVogue;
     border: 2px solid #C5AE96;
     background-color: #DBC6B0;
 	font-size: 1rem;
 	color: black;
-	width: 2.65em;
+	width: 7em;
     height: 2.65em;
     transition: .2s ease-in-out;
     cursor: pointer;
@@ -209,9 +209,12 @@ main{
     background-color: #D2BBA3;
 	box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
 	margin-top: 0.3rem;
-    transform: translateX(-2.5em);
+    transform: translateX(-1.25em);
     border-radius: 10px;
 	padding: 0.5rem;
+    width: 240px;
+    right: 0;
+    z-index: 99;
 }
 table {
 	border-collapse: collapse;
@@ -377,14 +380,16 @@ table {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    font-size: 1.25em;
-    padding: 0 0 0 0.5em;
     border-radius: 15px 15px 0 0;
     background-color: #D2BBA3;
-    padding: 0.75em;
+    padding: 0.75em 0.75em 0.75em 1.15em;
     border: none;
     border-bottom: 3px solid #B8AA9C;
     z-index: 3;
+}
+
+.bills_title{
+    font-size: 1.35em;
 }
 
 .billing {
@@ -415,6 +420,7 @@ table {
     outline: none;
     font-size: 1.25em;
     transition: .2s ease-in-out;
+    background-color: rgb(207, 188, 168, 0.5);
 }
 .collapsible::after{
     content: '';
@@ -429,10 +435,10 @@ table {
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .collapsible:hover {
-    background-color: rgb(207, 188, 168, 0.5);
+    background-color: rgb(207, 188, 168, 1);
   }
   .active{
-    background-color: rgb(207, 188, 168, 0.5);
+    background-color: rgb(207, 188, 168, 1);
     border-radius: 20px 20px 0 0;
     padding: 1.5em 0 0.5em 2.5em;
   }
@@ -452,7 +458,7 @@ table {
     border-radius: 0 0 20px 20px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: rgb(207, 188, 168, 0.5);
+    background-color: rgb(207, 188, 168, 1);
   }
 
 .bills_scroll {
@@ -472,7 +478,8 @@ table {
     text-align: center;
     border-radius: 10px;
     position: sticky;
-    font-size: 1em;
+    font-size: 1.15em;
+    font-weight: bold;
     top: 0;
     z-index: 5;
 }
@@ -630,6 +637,12 @@ table {
         width: 28px;
         height: 19px;
     }
+    .sales_stats{
+        font-size: 0.85em;
+    }
+    .bills_title{
+        font-size: 0.95em;
+    }
 }
 @media screen and (max-width: 375px) {
     .top_bar{
@@ -646,13 +659,17 @@ table {
         height: 3em;
     }
     .sales{
-        font-size: 1em;
+        font-size: 1.25em;
         border-bottom: 2px solid #B8AA9C;
     }
 }
 @media screen and (max-width: 279px) {
     .small_device{
         display: flex;
+    }
+    body{
+        width: 100%;
+        height: 100dvh;
     }
     main{
         display: none;

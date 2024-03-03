@@ -4,3 +4,9 @@ $( function() {
 		,	duration: "fast"
 	});
 } );
+$( function() {
+	$( "#datepicker1" ).datepicker({
+		dateFormat: "dd-mm-yy"
+		,	duration: "fast"
+	});
+} );
