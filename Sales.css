@@ -1,0 +1,660 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------ SCROLLBAR ------------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: #C5AB8F; 
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+    border: solid 7px #DBC6B0;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #856d546b; 
+}
+
+/* ------------------------------------------ FONTS ------------------------------------------*/
+
+@font-face {
+    font-family: AestheticRegular;
+    src: url(fonts/AestheticRegular-8M5dM.ttf);
+}
+@font-face {
+    font-family: Brownhill;
+    src: url(fonts/Brownhill\ Script.ttf);
+}
+@font-face {
+    font-family: ClassyVogue;
+    src: url(fonts/Classy\ Vogue\ Stylish\ Serif\ Font.otf);
+}
+
+
+/* ------------------------------------------ BODY ------------------------------------------*/
+
+body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DBC6B0;
+    font-family: ClassyVogue;
+    background-color: #dbc6b0;
+    background-image: url(background_img/batthern.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+body::-webkit-scrollbar {
+    width: 20px;
+    display: none;
+}
+
+/* ------------------------------------------ MAIN ------------------------------------------*/
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0em 1.5em 1.5em 1.5em;
+}
+
+
+/* ------------------------------------------ TOP-BAR ------------------------------------------*/
+
+.top_bar{
+    width: 100%;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 1em;
+    padding: 1em;
+}
+
+.back_svg{
+    width: 18px;
+    height: 18px;
+}
+
+.back_button{
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em;
+    border: 2px solid #B8AA9C;
+    background-color: #DBC6B0;
+    outline: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.back_button:hover{
+    filter: none;
+}
+.back_button:focus{
+    background-color: #C5AE96;
+    filter: none;
+}
+
+.sales{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0 0 0.5em;
+    font-size: 1.75em;
+    width: 100%;
+    height: 90%;
+    border: none;
+    border-bottom: 3px solid #B8AA9C;
+    background-color: transparent;
+}
+
+
+/* ------------------------------------------ SALES ------------------------------------------*/
+
+.sales_stats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    background-color: #DBC6B0;
+    border: 3px solid #B8AA9C;
+    border-radius: 20px;
+    gap: 1em;
+    padding-bottom: 1em;
+    margin: 0 1em 1em 1em;
+}
+
+
+/* ------------------------------------------ SALES-TOP ------------------------------------------*/
+
+.ss_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.25em;
+    border-radius: 15px 15px 0 0;
+    background-color: #D2BBA3;
+    padding: 0.75em 0 0.75em 1em;
+    border: none;
+    border-bottom: 3px solid #B8AA9C;
+}
+
+/* ------------------------------------------ DATE-PICKER ------------------------------------------*/
+
+.calender_wrapper {
+    position: relative;
+}
+.calender_wrapper::before{
+    content: "";
+    position: absolute;
+    margin-top: 0.6em;
+    margin-left: 0.6em;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url(svg/calender.svg);
+    cursor: pointer;
+}
+.datepicker_input {
+	display:flex;
+    align-items: center;
+    justify-content: center;
+	border: none;
+	border-radius: 10px;
+	border: 1px solid transparent;
+	line-height: 1.5rem;
+    font-family: ClassyVogue;
+    border: 2px solid #C5AE96;
+    background-color: #DBC6B0;
+	font-size: 1rem;
+	color: black;
+	width: 2.65em;
+    height: 2.65em;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.datepicker_input:hover{
+    background-color: #C5AE96;
+}
+.datepicker_input:focus{
+    background-color: #C5AE96;
+}
+.datepicker_input:focus {outline: none;}
+#ui-datepicker-div {
+	display: none;
+	border: 2px solid #C5AE96;
+    background-color: #D2BBA3;
+	box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+	margin-top: 0.3rem;
+    transform: translateX(-2.5em);
+    border-radius: 10px;
+	padding: 0.5rem;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.ui-datepicker-calendar thead th {
+	padding: 0.25rem 0;
+	text-align: center;
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: black;
+}
+.ui-datepicker-calendar tbody td {
+	width: 2.5rem;
+	text-align: center;
+	padding: 0;
+}
+.ui-datepicker-calendar tbody td a {
+	display: block;
+	border-radius: 0.25rem;
+	line-height: 2rem;
+	transition: 0.3s all;
+	color: black;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+.ui-datepicker-calendar tbody td a:hover {	
+	background-color: #C3A88C;
+}
+.ui-datepicker-calendar tbody td a.ui-state-active {
+	background-color: #C3A88C;
+	color: black;
+}
+.ui-datepicker-header a.ui-corner-all {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	width: 2rem;
+	height: 2rem;
+	margin: 0.5rem;
+	border-radius: 0.25rem;
+	transition: 0.3s all;
+}
+.ui-datepicker-header a.ui-corner-all:hover {
+	background-color: #C3A88C;
+}
+.ui-datepicker-header a.ui-datepicker-prev {	
+	left: 0;	
+	background: url(svg/arrow-left.svg);
+	background-repeat: no-repeat;
+	background-size: 0.5rem;
+	background-position: 50%;
+	transform: rotate(180deg);
+}
+.ui-datepicker-header a.ui-datepicker-next {
+	right: 0;
+	background: url(svg/arrow-right.svg);
+	background-repeat: no-repeat;
+	background-size: 10px;
+	background-position: 50%;
+}
+.ui-datepicker-header a>span {
+	display: none;
+}
+.ui-datepicker-title {
+	text-align: center;
+	line-height: 2rem;
+	margin-bottom: 0.25rem;
+	font-size: 1.15em;
+	font-weight: 500;
+	padding-bottom: 0.75rem;
+}
+.ui-datepicker-week-col {
+	color: #78909C;
+	font-weight: 400;
+	font-size: 0.75rem;
+}
+
+
+/* ------------------------------------------ SALES-MIDDLE ------------------------------------------*/
+
+.ss_middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.stats_list{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 3em 2em 3em 2em;
+    width: 100%;
+    height: max-content;
+    gap: 2.5em;
+}
+.stats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.stats_icon{
+    padding: 0.75em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CFBCA8;
+}
+.stats_icon_svg{
+    width: 25px;
+    height: 25px;
+}
+.stats_icon_svgP{
+    width: 33px;
+    height: 24px;
+}
+.stats_data{
+    display: flex;
+    align-items: start;
+    gap: 0.15em;
+    justify-content: center;
+    flex-direction: column;
+}
+.stats_data_sub{
+    color: #7B5A42;
+}
+
+
+/* ------------------------------------------ SALES-BOTTOM ------------------------------------------*/
+
+.ss_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 3em 2em 3em 2em;
+    width: 100%;
+    height: max-content;
+}
+
+
+/* ------------------------------------------ TABLES ------------------------------------------*/
+
+.bills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #DBC6B0;
+    border: 3px solid #B8AA9C;
+    border-radius: 20px;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.bills_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.25em;
+    padding: 0 0 0 0.5em;
+    border-radius: 15px 15px 0 0;
+    background-color: #D2BBA3;
+    padding: 0.75em;
+    border: none;
+    border-bottom: 3px solid #B8AA9C;
+    z-index: 3;
+}
+
+.billing {
+    width: 100%;
+    height: 48em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 1em;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    font-family: ClassyVogue;
+    padding: 1em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    font-size: 1.25em;
+    transition: .2s ease-in-out;
+}
+.collapsible::after{
+    content: '';
+    position: relative;
+    right: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #B59A7E;
+    transition: .2s ease-in-out;
+}
+
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .collapsible:hover {
+    background-color: rgb(207, 188, 168, 0.5);
+  }
+  .active{
+    background-color: rgb(207, 188, 168, 0.5);
+    border-radius: 20px 20px 0 0;
+    padding: 1.5em 0 0.5em 2.5em;
+  }
+  .collapsible.active::after {
+    margin-right: 2.65em;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    width: 100%;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 0;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(207, 188, 168, 0.5);
+  }
+
+.bills_scroll {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+  
+.bills_scroll .header {
+    width: 98%;
+    background-color: #D2BBA3;
+    border: 3px solid #C5AE96;
+    padding: 1.5em;
+    text-align: center;
+    border-radius: 10px;
+    position: sticky;
+    font-size: 1em;
+    top: 0;
+    z-index: 5;
+}
+.content-inner{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background-color: transparent;
+    border: 3px solid #B8AA9C;
+    width: 97%;
+    margin: 0 1em 0.5em 1em;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.tables{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 99%;
+    height: 29em;
+    background-color: #DBC6B0;
+    outline: 3px solid #B8AA9C;
+    border-radius: 20px 20px 0 0;
+    padding: 1.5em;
+    gap: 1.5em;
+    margin: 1em 0 0 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.table{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    row-gap: 1em;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DBC6B0;
+    border: none;
+    border-bottom: 3px solid #B8AA9C;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.table:hover{
+    filter: none;
+}
+
+.add_svg, .remove_svg{
+    width: 30px;
+    height: 30px;
+}
+.add, .remove{
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: .2s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.add:hover, .remove:hover{
+    background-color: #C5AE96;
+}
+
+.price_tag{
+    width: 99%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em 0 1.5em;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    justify-content: space-between;
+    background-color: #D2BBA3;
+    outline: 3px solid #B8AA9C;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* ------------------------------------------ SMALL-DEVICE ------------------------------------------*/
+
+.small_device{
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+    text-align: center;
+}
+
+
+/* ------------------------------------------ MEDIA-QUERIES ------------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+    .tables_data{
+        padding-bottom: 0;
+    }
+    .table{
+        margin-top: 0.5em;
+    }
+    .tables{
+        margin: 1em;
+    }
+}
+@media screen and (max-width: 610px) {
+    .stats_list{
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media screen and (max-width: 570px) {
+    .tables_data{
+        flex-direction: column;
+        row-gap: 1.25em;
+        margin-bottom: 1.5em;
+    }
+    .table{
+        row-gap: 1em;
+        padding: 0;
+        font-size: 1em;
+    }
+    .add_svg, .remove_svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .stats_list{
+        padding: 2em 1em 2em 1em;
+    }
+    .stats{
+        gap: 0.65em;
+    }
+    .stats_data{
+        font-size: 0.7em;
+    }
+    .stats_icon{
+        padding: 0.55em;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #CFBCA8;
+    }
+    .stats_icon_svg{
+        width: 20px;
+        height: 20px;
+    }
+    .stats_icon_svgP{
+        width: 28px;
+        height: 19px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .top_bar{
+        width: 100%;
+        height: 4em;
+        column-gap: 0.65em;
+    }
+    .back_svg{
+        width: 12px;
+        height: 12px;
+    }
+    .back_button{
+        width: 3em;
+        height: 3em;
+    }
+    .sales{
+        font-size: 1em;
+        border-bottom: 2px solid #B8AA9C;
+    }
+}
+@media screen and (max-width: 279px) {
+    .small_device{
+        display: flex;
+    }
+    main{
+        display: none;
+    }
+}

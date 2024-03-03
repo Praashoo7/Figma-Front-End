@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------ SCROLLBAR ------------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: #C5AB8F; 
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+    border: solid 7px #DBC6B0;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #856d546b; 
+}
+
+/* ------------------------------------------ FONTS ------------------------------------------*/
+
+@font-face {
+    font-family: AestheticRegular;
+    src: url(fonts/AestheticRegular-8M5dM.ttf);
+}
+@font-face {
+    font-family: Brownhill;
+    src: url(fonts/Brownhill\ Script.ttf);
+}
+@font-face {
+    font-family: ClassyVogue;
+    src: url(fonts/Classy\ Vogue\ Stylish\ Serif\ Font.otf);
+}
+
+
+/* ------------------------------------------ BODY ------------------------------------------*/
+
+body{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DBC6B0;
+    font-family: ClassyVogue;
+    background-color: #dbc6b0;
+    background-image: url(background_img/batthern.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+
+/* ------------------------------------------ MAIN ------------------------------------------*/
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 1.5em;
+}
+
+
+/* ------------------------------------------ TOP-BAR ------------------------------------------*/
+
+.top_bar{
+    width: 100%;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 1em;
+    padding: 1em;
+}
+
+.back_svg{
+    width: 18px;
+    height: 18px;
+}
+
+.back_button{
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em;
+    border: 2px solid #B8AA9C;
+    background-color: #DBC6B0;
+    outline: none;
+    border-radius: 10px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.back_button:hover{
+    filter: none;
+}
+.back_button:focus{
+    background-color: #C5AE96;
+    filter: none;
+}
+
+.billing{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0 0 0.5em;
+    font-size: 1.5em;
+    width: 100%;
+    height: 90%;
+    border: none;
+    border-bottom: 3px solid #B8AA9C;
+    background-color: transparent;
+}
+
+/* ------------------------------- INFO-POPUP ------------------------------- */
+
+.info_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    padding: 0;
+    border: none;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: .2s ease-in-out;
+}
+.info_button:hover{
+    cursor: pointer;
+    fill: crimson;
+}
+.info_popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.9);
+    font-family: Josefin Slab;
+    font-size: 1.25em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.4s ease-in-out;
+    z-index: -2;
+}
+.info_popup_content .divider{
+    width: 100%;
+    border: 1px solid #0000006b;
+    border-radius: 15px;
+}
+.info_popup_content{
+    max-width: 400px;
+    height: auto;
+    background-color: #DBC6B0;
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1em;
+    padding: 1.5em;
+    margin: 1em;
+    font-family: ClassyVogue;
+}
+.info_title{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.delete_buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.cancel_only{
+    background-color: #303030;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    padding: 1em;
+    border-radius: 8px;
+    outline: none;
+    color: white;
+    font-family: ClassyVogue;
+    transition: .4s ease-in-out;
+}
+.cancel_only:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.information{
+    line-height: 1.15em;
+    font-size: 0.9em;
+}
+
+
+/* ------------------------------------------ BOTTOM-BAR ------------------------------------------*/
+
+.bottom_bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1em;
+    padding: 0.45em;
+    background-color: #D2BBA3;
+    border: 2px solid #B8AA9C;
+    border-radius: 15px;
+    margin: 1em;
+}
+
+.front{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.disabled_button{
+    padding: 1em;
+    border: 2px solid #B8AA9C;
+    background-color: #DBC6B0;
+    outline: none;
+    font-size: 1.25em;
+    border-radius: 10px;
+    font-family: ClassyVogue;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.note_label{
+    font-size: 1.3em;
+    width: 100%;
+}
+.note{
+    width: 100%;
+    height: 2.65em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85em;
+    font-size: 1.25em;
+    font-family: ClassyVogue;
+    border: none;
+    border-bottom: 2px solid #B8AA9C;
+    outline: none;
+    background-color: transparent;
+    transition: .2s ease-in-out;
+}
+.note:focus{
+    border-radius: 10px;
+    background-color: #C5AE96;
+}
+.note::placeholder{
+    opacity: 0;
+}
+
+.add_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em 0.4em;
+}
+.add_items, .bill{
+    padding: 1em;
+    border: 2px solid #B8AA9C;
+    background-color: #DBC6B0;
+    outline: none;
+    font-size: 1.25em;
+    border-radius: 10px;
+    font-family: ClassyVogue;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.add_items:hover, .bill:hover{
+    background-color: #C5AE96;
+}
+
+
+/* ------------------------------------------ TABLES ------------------------------------------*/
+
+.tables{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: #DBC6B0;
+    outline: 3px solid #B8AA9C;
+    border-radius: 20px 20px 0 0;
+    padding: 1.5em 0em 1.5em 1.5em;
+    gap: 1.5em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0.5em 0 0 0;
+}
+
+.table{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    row-gap: 1em;
+    font-size: 1.3em;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DBC6B0;
+    border: none;
+    border-bottom: 3px solid #B8AA9C;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.table:hover{
+    filter: none;
+}
+
+.add_svg, .remove_svg{
+    width: 25px;
+    height: 25px;
+}
+.add, .remove{
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: .2s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.add:hover, .remove:hover{
+    background-color: #C5AE96;
+}
+
+.price_tag{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em 0 1.5em;
+    font-size: 1.5em;
+    justify-content: space-between;
+    background-color: #D2BBA3;
+    outline: 3px solid #B8AA9C;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* ------------------------------------------ SMALL-DEVICE ------------------------------------------*/
+
+.small_device{
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+    text-align: center;
+}
+
+
+/* ------------------------------------------ MEDIA-QUERIES ------------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+    .tables_data{
+        padding-bottom: 0;
+    }
+    .table{
+        margin-top: 0.5em;
+    }
+}
+@media screen and (max-width: 840px) {
+    .bottom_bar{
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1em;
+    }
+    .front, .note, .add_buttons{
+        width: 100%;
+    }
+    .add_items, .bill{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .disabled_button{
+        width: 100%;
+    }
+    .note_label{
+        display: none;
+    }
+    .note::placeholder{
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 500px) {
+    .add_buttons{
+        flex-direction: column;
+    }
+    .price_tag{
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        row-gap: 0.5em;
+        padding: 1em;
+    }
+}
+@media screen and (max-width: 570px) {
+    .tables_data{
+        flex-direction: column;
+        row-gap: 1.25em;
+        margin-bottom: 1.5em;
+    }
+    .table{
+        row-gap: 1em;
+        padding: 0;
+        font-size: 1em;
+    }
+    .price_tag{
+        font-size: 1.25em;
+        margin-bottom: 0.25em;
+    }
+    .add_svg, .remove_svg{
+        width: 20px;
+        height: 20px;
+    }
+    .bottom_bar{
+       margin: 0.5em;
+    }
+    .disabled_button, .add_items, .bill{
+        padding: 0.65em;
+    }
+}
+@media screen and (max-width: 420px) {
+    .front{
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1em;
+    }
+    .disabled_button{
+        width: 100%;
+    }
+    .note_label{
+        display: none;
+    }
+    .note::placeholder{
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 375px) {
+    .top_bar{
+        width: 100%;
+        height: 4em;
+        column-gap: 0.65em;
+    }
+    .back_svg{
+        width: 12px;
+        height: 12px;
+    }
+    .back_button{
+        width: 3em;
+        height: 3em;
+    }
+    .billing{
+        font-size: 1em;
+        border-bottom: 2px solid #B8AA9C;
+    }
+}
+@media screen and (max-width: 279px) {
+    .small_device{
+        display: flex;
+    }
+    main{
+        display: none;
+    }
+}

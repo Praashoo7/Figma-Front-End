@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------ SCROLLBAR ------------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: #C5AB8F; 
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+    border: solid 8px #DBC6B0;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #856d546b; 
+}
+
+/* ------------------------------------------ FONTS ------------------------------------------*/
+
+@font-face {
+    font-family: AestheticRegular;
+    src: url(fonts/AestheticRegular-8M5dM.ttf);
+}
+@font-face {
+    font-family: Brownhill;
+    src: url(fonts/Brownhill\ Script.ttf);
+}
+@font-face {
+    font-family: ClassyVogue;
+    src: url(fonts/Classy\ Vogue\ Stylish\ Serif\ Font.otf);
+}
+
+
+/* ------------------------------------------ BODY ------------------------------------------*/
+
+body{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DBC6B0;
+    font-family: ClassyVogue;
+    background-color: #dbc6b0;
+    background-image: url(background_img/batthern.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+
+/* ------------------------------------------ MAIN ------------------------------------------*/
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 1.5em;
+}
+
+
+/* ------------------------------------------ ACCOUNT ------------------------------------------*/
+
+.account{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: end;
+}
+
+.account_svg{
+    width: 18px;
+    height: 18px;
+}
+
+.account_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em;
+    border: 2px solid #B8AA9C;
+    background-color: #DBC6B0;
+    outline: none;
+    margin: 1em -1em 1em 1em;
+    border-radius: 10px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.account_button:hover{
+    filter: none;
+}
+.account_button:focus{
+    background-color: #C5AE96;
+    filter: none;
+}
+
+.account_button:focus ~ .account_menu{
+    opacity: 1;
+}
+
+
+/* ------------------------------------------ ACCOUNT ------------------------------------------*/
+
+.account_menu{
+    opacity: 0;
+    position: absolute;
+    margin-top: 10em;
+    margin-right: -0.75em;
+    display: flex;
+    flex-direction: column;
+    row-gap: .25em;
+    align-items: end;
+    padding: 0 0.7em 0 0.7em;
+    justify-content: center;
+    width: 190px;
+    height: 100px;
+    border: 1px solid #B8AA9C;
+    background-color: #DBC6B0;
+    border-radius: 15px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: .2s ease-in-out;
+    z-index: 5;
+}
+.divider{
+    width: 100%;
+    border: 1px solid #B8AA9C;
+}
+.sales, .logout{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 1.25em;
+    padding: 0.25em;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sales:hover, .logout:hover{
+    background-color: #C5AE96;
+    letter-spacing: 0.15em;
+}
+
+
+/* ------------------------------------------ MAIN-TITLE ------------------------------------------*/
+
+.main_title{
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hotel{
+    font-family: AestheticRegular;
+    font-size: 3.5em;
+}
+.management{
+    color: #2B2B2B;
+    opacity: 0.4;
+    font-family: Brownhill;
+    font-size: 3.5em;
+    transform: translateY(-0.6em) translateX(-0.25em);
+}
+
+
+/* ------------------------------------------ TABLES-DATA ------------------------------------------*/
+
+.tables_data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 0 2em 0.5em 2em;
+}
+
+
+/* ------------------------------------------ LOCATION-BUTTONS ------------------------------------------*/
+
+.location_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.hall, .garden, .back{
+    outline: none;
+    padding: 0.75em;
+    border: 2px solid #B8AA9C;
+    background-color: #DBC6B0;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    font-size: 1.15em;
+    font-family: ClassyVogue;
+    border-radius: 10px;
+}
+.hall:hover, .garden:hover, .back:hover{
+    background-color: #C5AE96;
+}
+.hall:focus, .garden:focus, .back:focus{
+    background-color: #C5AE96;
+}
+
+
+/* ------------------------------------------ INDICATORS ------------------------------------------*/
+
+.indicators{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.75em;
+    row-gap: 0.75em;
+    flex-wrap: wrap;
+}
+
+.empty, .running, .pending{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5em;
+}
+
+.empty_color_indicator, .running_color_indicator, .pending_color_indicator{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+}
+
+.empty_color_indicator{
+    background-color: #808080;
+}
+.running_color_indicator{
+    background-color: #32CD32;
+}
+.pending_color_indicator{
+    background-color: #FFFF00;
+}
+
+
+/* ------------------------------------------ TABLES ------------------------------------------*/
+
+.tables{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: #DBC6B0;
+    outline: 3px solid #B8AA9C;
+    border-radius: 20px;
+    padding: 1.5em 0em 1.5em 1.5em;
+    gap: 1.5em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 1em;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    flex-grow: 1;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    width: 420px;
+    min-height: 220px;
+    height: 420px;
+    aspect-ratio: 1/1;
+    background-color: #DBC6B0;
+    border: 3px solid #B8AA9C;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.table:hover{
+    filter: none;
+}
+
+
+/* ------------------------------------------ SVGS ------------------------------------------*/
+
+.svg_container{
+    width: 150px;
+    height: 150px;
+    margin: 2em;
+}
+svg{
+    width: 100%;
+    height: 100%;
+}
+.bulb_g, .bulb_y{
+    fill: #808080;
+}
+/*#table1:hover*/.bulb_g{
+    fill: rgb(50, 205, 50, 0.8);
+    filter: url(#green-glow);
+}
+/*#table1:hover*/.table_top_g{
+    filter: url(#inset-shadow-g);
+}
+/*#table3:hover*/.bulb_y{
+    fill: rgb(255, 255, 0, 0.6);
+    filter: url(#yellow-glow);
+}
+/*#table3:hover*/.table_top_y{
+    filter: url(#inset-shadow-y);
+}
+.bulb_off{
+    fill: #808080;
+}
+
+
+/* ------------------------------------------ SMALL-DEVICE ------------------------------------------*/
+
+.small_device{
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+    text-align: center;
+}
+
+
+/* ------------------------------------------ MEDIA-QUERIES ------------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+    .main_title{
+        margin-bottom: 4em;
+    }
+    .garden, .back{
+        display: none;
+    }
+    .hall{
+        padding: 0.6em;
+    }
+    .tables_data{
+        padding-bottom: 0;
+    }
+    .table{
+        margin-top: 0.5em;
+    }
+    .indicators{
+        column-gap: 0.75em;
+    }
+    .hall:after{
+        content: '';
+        margin-bottom: 0.15em;
+        margin-left: 1em;
+        right: 0;
+        position: relative;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+}
+@media screen and (max-width: 570px) {
+    .account_button{
+        margin: 1em;
+        padding: 0.75em;
+    }
+    .hall{
+        padding: 0.4em;
+    }
+    .tables_data{
+        flex-direction: column;
+        row-gap: 1.25em;
+        margin-bottom: 1.5em;
+    }
+    .location_buttons, .indicators, .hall{
+        width: 100%;
+    }
+    .table{
+        row-gap: 1em;
+        padding: 0;
+    }
+    main, .tables{
+        margin: 0;
+    }
+    .tables{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .hotel, .management{
+        font-size: 2.5em;
+    }
+    .account_button{
+        padding: 0.5em;
+        border-radius: 8px;
+    }
+    .account_svg{
+        width: 12px;
+        height: 12px;
+    }
+    .account_menu{
+        width: 100px;
+        height: 50px;
+        margin-top: 6em;
+        border-radius: 10px;
+        margin-right: 0.85em;
+        row-gap: 0.1em;
+    }
+    .sales, .logout{
+        font-size: 0.75em;
+        padding: 0.1em 0.25em 0.1em 0.1em;
+        border-radius: 3px;
+    }
+    .sales:hover, .logout:hover{
+        letter-spacing: 0.1em;
+    }
+}
+@media screen and (max-width: 279px) {
+    .small_device{
+        display: flex;
+    }
+    main{
+        display: none;
+    }
+}
