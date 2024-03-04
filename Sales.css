@@ -163,11 +163,24 @@ main{
     border: none;
     border-bottom: 3px solid #B8AA9C;
 }
+.sales_title{
+    font-size: 1em;
+}
+
+.bills_top_options{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 0.7em;
+    margin: 0 0.8em 0 0;
+}
 
 /* ------------------------------------------ DATE-PICKER ------------------------------------------*/
 
 .calender_wrapper {
     position: relative;
+    z-index: 99;
 }
 /*.calender_wrapper::before{
     content: "";
@@ -184,6 +197,7 @@ main{
 	display:flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 	border-radius: 10px;
 	line-height: 1.5rem;
     font-family: ClassyVogue;
@@ -195,6 +209,7 @@ main{
     height: 2.65em;
     transition: .2s ease-in-out;
     cursor: pointer;
+    padding-top: 0.15em;
 }
 .datepicker_input:hover{
     background-color: #C5AE96;
@@ -209,12 +224,11 @@ main{
     background-color: #D2BBA3;
 	box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
 	margin-top: 0.3rem;
-    transform: translateX(-1.25em);
+    transform: translateX(-4em);
     border-radius: 10px;
 	padding: 0.5rem;
     width: 240px;
     right: 0;
-    z-index: 99;
 }
 table {
 	border-collapse: collapse;
@@ -294,6 +308,68 @@ table {
 }
 
 
+/* DROP-DOWN-MENU */
+.reference_dropdown{
+    display: flex;
+    flex-direction: row;
+    z-index: 99;
+}
+.custom_dropdown {
+    position: relative;
+    width: 6.5em;
+    border: 2px solid #C5AE96;
+    background-color: #DBC6B0;
+    border-radius: 10px;
+    font-size: 0.8em;
+}
+.custom_dropdown_table {
+    display: flex;
+    justify-content: space-between;
+    width: 13em;
+}
+.selected_option {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.options {
+    width: 100%;
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 1em 0 0;
+    border: 2px solid #C5AE96;
+    background-color: #D2BBA3;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.options_table {
+    margin-top: 3.5em;
+}
+.options li {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.options li:hover {
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #B59A7E;
+}
+
+.custom_arrow {
+    position: relative;
+    margin-left: -25px;
+    margin-top: 20px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #B59A7E;
+}
+
+
 /* ------------------------------------------ SALES-MIDDLE ------------------------------------------*/
 
 .ss_middle{
@@ -346,6 +422,7 @@ table {
 .stats_data_sub{
     color: #7B5A42;
 }
+  
 
 
 /* ------------------------------------------ SALES-BOTTOM ------------------------------------------*/
@@ -380,6 +457,8 @@ table {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    font-size: 1.25em;
+    height: max-content;
     border-radius: 15px 15px 0 0;
     background-color: #D2BBA3;
     padding: 0.75em 0.75em 0.75em 1.15em;
@@ -387,9 +466,8 @@ table {
     border-bottom: 3px solid #B8AA9C;
     z-index: 3;
 }
-
 .bills_title{
-    font-size: 1.35em;
+    font-size: 1.15em;
 }
 
 .billing {
@@ -481,7 +559,6 @@ table {
     font-size: 1.15em;
     font-weight: bold;
     top: 0;
-    z-index: 5;
 }
 .content-inner{
     display: flex;
@@ -490,7 +567,7 @@ table {
     flex-direction: column;
     background-color: transparent;
     border: 3px solid #B8AA9C;
-    width: 97%;
+    width: 96%;
     margin: 0 1em 0.5em 1em;
     border-radius: 20px;
     overflow: hidden;
@@ -550,10 +627,10 @@ table {
 
 .price_tag{
     width: 99%;
-    height: 3em;
+    height: max-content;
     display: flex;
     align-items: center;
-    padding: 0 1.5em 0 1.5em;
+    padding: 1.5em;
     font-size: 1.5em;
     margin-bottom: 1.5em;
     justify-content: space-between;
@@ -586,7 +663,22 @@ table {
         margin-top: 0.5em;
     }
     .tables{
-        margin: 1em;
+        margin: 1em 1em 0 1em;
+    }
+}
+@media screen and (max-width: 680px) {
+    .price_tag{
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        row-gap: 0.5em;
+        padding: 1em;
+    }
+    .bills_scroll .header {
+        width: 90%;
+    }
+    .content-inner{
+        width: 89%;
     }
 }
 @media screen and (max-width: 610px) {
@@ -609,6 +701,22 @@ table {
     .add_svg, .remove_svg{
         width: 20px;
         height: 20px;
+    }
+    .price_tag{
+        font-size: 1.25em;
+    }
+}
+@media screen and (max-width: 450px) {
+    .bills_top{
+        align-items: start;
+        flex-direction: column;
+        row-gap: 0.75em;
+    }
+    .bills_top_options{
+        justify-content: start;
+    }
+    #ui-datepicker-div {
+        transform: translateX(0em);
     }
 }
 @media screen and (max-width: 370px) {
@@ -637,8 +745,8 @@ table {
         width: 28px;
         height: 19px;
     }
-    .sales_stats{
-        font-size: 0.85em;
+    .sales_title{
+        font-size: 0.9em;
     }
     .bills_title{
         font-size: 0.95em;
