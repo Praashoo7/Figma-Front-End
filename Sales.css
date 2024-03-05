@@ -454,10 +454,18 @@ table {
 .ss_bottom{
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    padding: 3em 2em 3em 2em;
+    padding: 3em 2em 2.5em 2em;
     width: 100%;
-    height: max-content;
+}
+#chartdiv {
+    width: 100%;
+    height: 400px;
+    font-size: 1em;
+}
+.canvasjs-chart-credit {
+    display: none !important; /* Hide the CanvasJS logo */
 }
 
 
@@ -693,6 +701,9 @@ table {
     .tables{
         margin: 1em 1em 0 1em;
     }
+    #chartdiv {
+        font-size: 0.75em;
+    }
 }
 @media screen and (max-width: 680px) {
     .price_tag{
@@ -713,6 +724,14 @@ table {
     .stats_list{
         flex-direction: column;
         align-items: start;
+    }
+}
+@media screen and (max-width: 565px) {
+    #chartdiv {
+        font-size: 0.55em;
+    }
+    .ss_bottom{
+        padding: 3em 0.5em 2.5em 0.5em;
     }
 }
 @media screen and (max-width: 570px) {

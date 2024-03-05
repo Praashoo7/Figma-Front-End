@@ -197,19 +197,19 @@ main{
     justify-content: end;
 }
 .cancel_only{
-    background-color: #303030;
+    background-color: transparent;
+    border: 2px solid #B8AA9C;
     font-weight: bold;
-    border: none;
     text-transform: uppercase;
     padding: 1em;
     border-radius: 8px;
     outline: none;
-    color: white;
+    color: black;
     font-family: ClassyVogue;
     transition: .4s ease-in-out;
 }
 .cancel_only:hover{
-    opacity: 0.8;
+    background-color: #C5AE96;
     cursor: pointer;
 }
 .information{
