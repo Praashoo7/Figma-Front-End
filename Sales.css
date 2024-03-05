@@ -308,7 +308,8 @@ table {
 }
 
 
-/* DROP-DOWN-MENU */
+/* ------------------------------------------ CUSTOM-DROPDOWN ------------------------------------------*/
+
 .reference_dropdown{
     display: flex;
     flex-direction: row;
@@ -321,6 +322,10 @@ table {
     background-color: #DBC6B0;
     border-radius: 10px;
     font-size: 0.8em;
+    transition: .2s ease-in-out;
+}
+.custom_dropdown:hover{
+    background-color: rgb(197, 174, 150, 0.5);
 }
 .custom_dropdown_table {
     display: flex;
@@ -334,16 +339,35 @@ table {
 }
 .options {
     width: 100%;
-    display: none;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
     position: absolute;
     list-style: none;
     padding: 0;
-    margin: 0.5em 1em 0 0;
+    margin: 0.4em 1em 0 0;
     border: 2px solid #C5AE96;
     background-color: #D2BBA3;
     box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
     border-radius: 10px;
     overflow: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+}
+.options.active {
+    width: 100%;
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0.4em 1em 0 0;
+    border: 2px solid #C5AE96;
+    background-color: #D2BBA3;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out;
 }
 .options_table {
     margin-top: 3.5em;
@@ -352,12 +376,12 @@ table {
     padding: 10px;
     margin: 5px;
     cursor: pointer;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .options li:hover {
     margin: 5px;
     border-radius: 5px;
-    background-color: #B59A7E;
+    background-color: rgb(197, 174, 150);
 }
 
 .custom_arrow {
@@ -430,14 +454,14 @@ table {
 .ss_bottom{
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     padding: 3em 2em 3em 2em;
     width: 100%;
     height: max-content;
 }
 
 
-/* ------------------------------------------ TABLES ------------------------------------------*/
+/* ------------------------------------------ BILLING ------------------------------------------*/
 
 .bills{
     display: flex;
@@ -480,9 +504,13 @@ table {
     overflow-y: scroll;
     overflow-x: hidden;
     gap: 1em;
+    padding-bottom: 1.5em;
+    mask-image: linear-gradient(to bottom, black calc(100% - 48px), transparent 100%);
 }
 
-/* Style the button that is used to open and close the collapsible content */
+
+/* ------------------------------------------ COLLAPSIBLE ------------------------------------------*/
+
 .collapsible {
     background-color: transparent;
     color: black;
@@ -509,35 +537,18 @@ table {
     border-top: 8px solid #B59A7E;
     transition: .2s ease-in-out;
 }
-
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .collapsible:hover {
+.collapsible:hover {
     background-color: rgb(207, 188, 168, 1);
-  }
-  .active{
+}
+.active{
     background-color: rgb(207, 188, 168, 1);
     border-radius: 20px 20px 0 0;
     padding: 1.5em 0 0.5em 2.5em;
-  }
-  .collapsible.active::after {
+}
+.collapsible.active::after {
     margin-right: 2.65em;
-  }
+}
   
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    width: 100%;
-    padding: 0 18px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    max-height: 0;
-    border-radius: 0 0 20px 20px;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: rgb(207, 188, 168, 1);
-  }
 
 .bills_scroll {
     width: 100%;
@@ -559,6 +570,7 @@ table {
     font-size: 1.15em;
     font-weight: bold;
     top: 0;
+    z-index: 2;
 }
 .content-inner{
     display: flex;
@@ -572,6 +584,22 @@ table {
     border-radius: 20px;
     overflow: hidden;
 }
+.content {
+    width: 100%;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 0;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(207, 188, 168, 1);
+}
+
+
+/* ------------------------------------------ TABLES ------------------------------------------*/
 
 .tables{
     display: flex;
