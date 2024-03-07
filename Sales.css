@@ -19,7 +19,10 @@
     background-color: #C5AB8F; 
     border-radius: 10px;
     transition: .4s ease-in-out;
-    border: solid 7px #DBC6B0;
+    border-top: solid 18px #DBC6B0;
+    border-bottom: solid 18px #DBC6B0;
+    border-left: solid 8px #DBC6B0;
+    border-right: solid 8px #DBC6B0;
     cursor: pointer;
 }
 
@@ -52,9 +55,12 @@ body{
     justify-content: center;
     background-color: #DBC6B0;
     font-family: ClassyVogue;
-    background-color: #dbc6b0;
-    background-image: url(background_img/batthern.png);
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-image: url(imgs/batthern.png);
+    animation:transitionIn 0.4s;
+}
+@keyframes transitionIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 
 body::-webkit-scrollbar {
@@ -71,7 +77,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    margin: 0em 1.5em 1.5em 1.5em;
+    margin: 0em 1.5em 1.25em 1.5em;
 }
 
 
@@ -137,14 +143,12 @@ main{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: max-content;
     background-color: #DBC6B0;
     border: 3px solid #B8AA9C;
     border-radius: 20px;
     gap: 1em;
     padding-bottom: 1em;
-    margin: 0 1em 1em 1em;
-    font-size: 1.15em;
+    margin: 0 0 1em 0;
 }
 
 
@@ -162,12 +166,14 @@ main{
     padding: 0.75em 0.75em 0.75em 1em;
     border: none;
     border-bottom: 3px solid #B8AA9C;
+    z-index: 3;
 }
 .sales_title{
     font-size: 1em;
+    text-wrap: nowrap;
 }
 
-.bills_top_options{
+.bills_top_options, .sales_top_options{
     display: flex;
     align-items: center;
     justify-content: end;
@@ -301,11 +307,6 @@ table {
 	font-weight: 500;
 	padding-bottom: 0.75rem;
 }
-.ui-datepicker-week-col {
-	color: #78909C;
-	font-weight: 400;
-	font-size: 0.75rem;
-}
 
 
 /* ------------------------------------------ CUSTOM-DROPDOWN ------------------------------------------*/
@@ -313,6 +314,7 @@ table {
 .reference_dropdown{
     display: flex;
     flex-direction: row;
+    justify-content: end;
     z-index: 99;
 }
 .custom_dropdown {
@@ -327,17 +329,12 @@ table {
 .custom_dropdown:hover{
     background-color: rgb(197, 174, 150, 0.5);
 }
-.custom_dropdown_table {
-    display: flex;
-    justify-content: space-between;
-    width: 13em;
-}
-.selected_option {
+.selected_option_sales, .selected_option_billing {
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
 }
-.options {
+.options_sales, .options_billing {
     width: 100%;
     opacity: 0;
     display: block;
@@ -353,7 +350,7 @@ table {
     overflow: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
 }
-.options.active {
+.options_sales.active, .options_billing.active {
     width: 100%;
     opacity: 1;
     display: block;
@@ -372,22 +369,21 @@ table {
 .options_table {
     margin-top: 3.5em;
 }
-.options li {
+.options_sales li, .options_billing li {
     padding: 10px;
     margin: 5px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
-.options li:hover {
+.options_sales li:hover, .options_billing li:hover {
     margin: 5px;
     border-radius: 5px;
     background-color: rgb(197, 174, 150);
 }
-
-.custom_arrow {
-    position: relative;
-    margin-left: -25px;
-    margin-top: 20px;
+.custom_arrow_sales, .custom_arrow_bill {
+    position: absolute;
+    margin-top: 0.85em;
+    margin-right: 0.85em;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid #B59A7E;
@@ -490,10 +486,9 @@ table {
     justify-content: space-between;
     width: 100%;
     font-size: 1.25em;
-    height: max-content;
     border-radius: 15px 15px 0 0;
     background-color: #D2BBA3;
-    padding: 0.75em 0.75em 0.75em 1.15em;
+    padding: 0.75em 0.75em 0.75em 1em;
     border: none;
     border-bottom: 3px solid #B8AA9C;
     z-index: 3;
@@ -692,9 +687,6 @@ table {
 /* ------------------------------------------ MEDIA-QUERIES ------------------------------------------*/
 
 @media screen and (max-width: 1000px) {
-    .tables_data{
-        padding-bottom: 0;
-    }
     .table{
         margin-top: 0.5em;
     }
@@ -735,11 +727,6 @@ table {
     }
 }
 @media screen and (max-width: 570px) {
-    .tables_data{
-        flex-direction: column;
-        row-gap: 1.25em;
-        margin-bottom: 1.5em;
-    }
     .table{
         row-gap: 1em;
         padding: 0;
@@ -753,13 +740,13 @@ table {
         font-size: 1.25em;
     }
 }
-@media screen and (max-width: 450px) {
-    .bills_top{
+@media screen and (max-width: 500px) {
+    .bills_top, .ss_top{
         align-items: start;
         flex-direction: column;
         row-gap: 0.75em;
     }
-    .bills_top_options{
+    .bills_top_options, .sales_top_options{
         justify-content: start;
     }
     #ui-datepicker-div {
@@ -816,6 +803,30 @@ table {
     .sales{
         font-size: 1.25em;
         border-bottom: 2px solid #B8AA9C;
+    }
+    .ss_top{
+        padding: 0.75em;
+    }
+    .bills_top_options, .sales_top_options{
+        justify-content: start;
+        margin: 0;
+        gap: 0.5em;
+        width: auto;
+    }
+    .datepicker_input{
+        width: 5.65em;
+        height: 2.2em;
+        padding-top: 0;
+    }
+    .datepicker_input::placeholder{
+        font-size: 0.85em;
+    }
+    .custom_dropdown{
+        width: 6.5em;
+        font-size: 0.65em;
+    }
+    .custom_arrow_sales, .custom_arrow_bill {
+        margin-right: 0.6em;
     }
 }
 @media screen and (max-width: 279px) {

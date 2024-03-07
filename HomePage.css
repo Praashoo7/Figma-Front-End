@@ -17,9 +17,12 @@
    
 ::-webkit-scrollbar-thumb {
     background-color: #C5AB8F; 
-    border-radius: 10px;
     transition: .4s ease-in-out;
-    border: solid 8px #DBC6B0;
+    border-top: solid 18px #DBC6B0;
+    border-bottom: solid 18px #DBC6B0;
+    border-left: solid 8px #DBC6B0;
+    border-right: solid 8px #DBC6B0;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -53,9 +56,12 @@ body{
     justify-content: center;
     background-color: #DBC6B0;
     font-family: ClassyVogue;
-    background-color: #dbc6b0;
-    background-image: url(background_img/batthern.png);
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-image: url(imgs/batthern.png);
+    animation:transitionIn 0.4s;
+}
+@keyframes transitionIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 
 
@@ -228,7 +234,7 @@ main{
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     column-gap: 1.75em;
     row-gap: 0.75em;
     flex-wrap: wrap;
@@ -255,6 +261,87 @@ main{
 }
 .pending_color_indicator{
     background-color: #FFFF00;
+}
+
+
+/* ------------------------------------------ CUSTOM-DROPDOWN ------------------------------------------*/
+
+.reference_dropdown{
+    display: none;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+    z-index: 99;
+}
+.custom_dropdown {
+    position: relative;
+    width: 10em;
+    border: 2px solid #B8AA9C;
+    background-color: #DBC6B0;
+    border-radius: 10px;
+    font-size: 0.95em;
+    transition: .2s ease-in-out;
+}
+.custom_dropdown:hover{
+    background-color: #D2BBA3;
+}
+.selected_option {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.options {
+    width: 100%;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0.4em 1em 0 0;
+    border: 2px solid #C5AE96;
+    background-color: #D2BBA3;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+}
+.options.active {
+    width: 100%;
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0.4em 1em 0 0;
+    border: 2px solid #C5AE96;
+    background-color: #D2BBA3;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out;
+}
+.options_table {
+    margin-top: 3.5em;
+}
+.options li {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.options li:hover {
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(197, 174, 150);
+}
+.custom_arrow {
+    position: absolute;
+    margin-right: 15px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #B59A7E;
 }
 
 
@@ -431,11 +518,12 @@ svg{
     .main_title{
         margin-bottom: 4em;
     }
-    .garden, .back{
+    .hall, .garden, .back{
         display: none;
     }
-    .hall{
-        padding: 0.6em;
+    .reference_dropdown{
+        display: flex;
+        width: 100%;
     }
     .tables_data{
         padding-bottom: 0;
@@ -445,6 +533,9 @@ svg{
     }
     .indicators{
         column-gap: 0.75em;
+    }
+    /*.hall{
+        padding: 0.6em;
     }
     .hall:after{
         content: '';
@@ -458,22 +549,26 @@ svg{
         padding: 3px;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
-    }
+    }*/
 }
 @media screen and (max-width: 570px) {
     .account_button{
         margin: 1em;
         padding: 0.75em;
     }
-    .hall{
+    /*.hall{
         padding: 0.4em;
-    }
+        width: 100%;
+    }*/
     .tables_data{
         flex-direction: column;
         row-gap: 1.25em;
         margin-bottom: 1.5em;
     }
-    .location_buttons, .indicators, .hall{
+    .location_buttons, .indicators {
+        width: 100%;
+    }
+    .custom_dropdown {
         width: 100%;
     }
     .table{

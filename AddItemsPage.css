@@ -19,7 +19,10 @@
     background-color: #C5AB8F; 
     border-radius: 10px;
     transition: .4s ease-in-out;
-    border: solid 7px #DBC6B0;
+    border-top: solid 18px #DBC6B0;
+    border-bottom: solid 18px #DBC6B0;
+    border-left: solid 8px #DBC6B0;
+    border-right: solid 8px #DBC6B0;
     cursor: pointer;
 }
 
@@ -53,9 +56,12 @@ body{
     justify-content: center;
     background-color: #DBC6B0;
     font-family: ClassyVogue;
-    background-color: #dbc6b0;
-    background-image: url(background_img/batthern.png);
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-image: url(imgs/batthern.png);
+    animation:transitionIn 0.4s;
+}
+@keyframes transitionIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 
 
@@ -338,9 +344,6 @@ input[type="radio"]:checked{
 /* ------------------------------------------ MEDIA-QUERIES ------------------------------------------*/
 
 @media screen and (max-width: 1000px) {
-    .tables_data{
-        padding-bottom: 0;
-    }
     .table{
         margin-top: 0.5em;
     }
@@ -349,7 +352,7 @@ input[type="radio"]:checked{
     .bottom_bar{
         flex-direction: column;
         align-items: start;
-        row-gap: 1em;
+        row-gap: 0.5em;
     }
     .front, .note, .add_buttons{
         width: 100%;
@@ -358,17 +361,12 @@ input[type="radio"]:checked{
         width: 100%;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .add_buttons{
         flex-direction: column;
     }
 }
 @media screen and (max-width: 570px) {
-    .tables_data{
-        flex-direction: column;
-        row-gap: 1.25em;
-        margin-bottom: 1.5em;
-    }
     .table{
         row-gap: 1em;
         padding: 0;
