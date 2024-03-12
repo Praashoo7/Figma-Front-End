@@ -118,6 +118,9 @@ main{
     filter: none;
 }
 
+
+/* ------------------------------------------ SEARCH ------------------------------------------*/
+
 .search_wrapper{
     display: flex;
     align-items: center;
@@ -143,6 +146,62 @@ main{
 .search:focus{
     filter: none;
 }
+
+
+/* ------------------------------------------ SEARCH-DROPDOWN ------------------------------------------*/
+
+.data_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    height: 3.75em;
+    transition: .4s ease-in-out;
+}
+.search_data{
+    width: 100%;
+}
+.add{
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search_options {
+    opacity: 0;
+    position: absolute;
+    align-self: start;
+    justify-self: start;
+    border: 2px solid #B8AA9C;
+    background-color: #D2BBA3;
+    width: 85%;
+    border-radius: 10px;
+    font-size: 1.1em;
+    overflow: auto;
+    z-index: 1;
+    margin-top: 3.5em;
+    transition: .4s ease-in-out;
+}
+  
+.search_options a {
+    color: black;
+    padding: 12px 16px;
+    margin: 0.75em 0 0.75em 0.5em;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.search_options a:hover{
+    background-color: #C3A88C;
+}
+
+.show {display: block;}
+
+
+/* ------------------------------------------ RADIO ------------------------------------------*/
 
 .radio{
     width: 8em;
@@ -192,7 +251,7 @@ input[type="radio"]:checked{
 
 
 
-/* ------------------------------------------ TOP-BAR ------------------------------------------*/
+/* ------------------------------------------ BOTTOM-BAR ------------------------------------------*/
 
 .bottom_bar{
     width: 100%;
@@ -379,6 +438,9 @@ input[type="radio"]:checked{
     .bottom_bar{
        margin: 0.5em;
     }
+    .search_options {
+        transform: translateX(1.75em);
+    }
 }
 @media screen and (max-width: 420px) {
     .front{
@@ -418,11 +480,19 @@ input[type="radio"]:checked{
         font-size: 0.95em;
         padding: 1.2em 1.2em 1.2em 0.75em;
     }
+    .search_options {
+        margin-top: 2.75em;
+    }
     .radioVeg::after, .radioNonVeg::after{
         width: 0.85em;
         height: 0.85em;
         margin-top: 0.9em;
         margin-left: 0.9em;
+    }
+}
+@media screen and (max-width: 310px) {
+    .search_options {
+        transform: translateX(1.4em);
     }
 }
 @media screen and (max-width: 279px) {

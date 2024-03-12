@@ -19,19 +19,49 @@
                 </button>
                 </div>
                 <div class="search_wrapper">
-                <input class="search" placeholder="Search" list="item-list">
-                <!--<datalist id="item-list">
-                    <option value="Item 1"></option>
-                    <option value="Item 2"></option>
-                    <option value="Item 3"></option>
-                    <option value="Item 4"></option>
-                    <option value="Item 5"></option>
-                    <option value="Item 6"></option>
-                    <option value="Item 7"></option>
-                    <option value="Item 8"></option>
-                    <option value="Item 9"></option>
-                    <option value="Item 10"></option>
-                </datalist>-->
+                <input class="search" placeholder="Search" onfocusin="searchDropdownOpen()" onfocusout="searchDropdownClose()" onkeyup="filterFunction()" id="searchInput" autocomplete="off">
+                    <div id="search_options" class="search_options">
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 1</a>
+                            <button class="add">
+                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 2</a>
+                            <button class="add">
+                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 3</a>
+                            <button class="add">
+                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 4</a>
+                            <button class="add">
+                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 5</a>
+                            <button class="add">
+                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="radio">
                 <input class="radioVeg" value="Veg" name="food" id="Veg" type="radio" label="Veg" />
@@ -217,3 +247,5 @@
 
 </body>
 </html>
+
+<script src="JS/AddItemsPage.js"></script>
