@@ -1,9 +1,15 @@
 /* --------------------- DROPDOWN-SEARCH --------------------- */
 
 function searchDropdownOpen() {
-    document.getElementById("search_options").style.opacity = 1;
+    document.getElementById("search_options").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("search_options").style.opacity = 1;
+    }, 100);
 }
 function searchDropdownClose() {
+    setTimeout(() => {
+        document.getElementById("search_options").style.display = "none";
+    }, 400);
     document.getElementById("search_options").style.opacity = 0;
 }
   
@@ -41,7 +47,7 @@ searchLinks.forEach(function(link) {
 
 /* --------------------- ADD-SEARCH-VALUE-BTN --------------------- */
 
-var addBtns = document.querySelectorAll('.add');
+var addBtns = document.querySelectorAll('.add_search');
 addBtns.forEach(function(btn) {
     btn.onclick = function() {
 

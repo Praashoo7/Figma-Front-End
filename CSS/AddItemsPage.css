@@ -161,14 +161,22 @@ main{
 .search_data{
     width: 100%;
 }
-.add{
+.add_search{
     margin: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: .2s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.add_search:hover{
+    background-color: #C5AE96;
 }
 .search_options {
     opacity: 0;
+    display: none;
     position: absolute;
     align-self: start;
     justify-self: start;
