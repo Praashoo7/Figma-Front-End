@@ -2,7 +2,7 @@
 
 While learning Figma, I created a Design for a Restro/Hotel Management Website for a Project. And then did the Front-End for it. This is just the Front-End code. You can navigate through the Webpages by just pressing Buttons From this [Site Link.](https://praashoo7.github.io/Photo-Gallery-React/) You can see the Screenshot of the Pages below.<br>
 
-CSS and JS folder have separate CSS-JS files in them for each page. If you want single CSS-JS files you can find<br>them [here.](https://praashoo7.github.io/Photo-Gallery-React/)<br><br>
+CSS and JS folder have separate CSS-JS files in them for each page. If you want single CSS-JS files you can find<br>them [here.](https://praashoo7.github.io/Photo-Gallery-React/)<br>
 
 
 ## Figma Link
