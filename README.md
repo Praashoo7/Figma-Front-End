@@ -1,6 +1,6 @@
 # [Restro/Hotel Management Website](https://praashoo7.github.io/Photo-Gallery-React/)
 
-While learning Figma, I created a Design for a Restro/Hotel Management Website for a Project. And then did the Front-End for it. This is just the Front-End code. You can navigate through the Webpages by just pressing Buttons From this below [Link.](https://praashoo7.github.io/Photo-Gallery-React/) Below are also Screenshot of the Pages.<br><br>
+While learning Figma, I created a Design for a Restro/Hotel Management Website for a Project. And then did the Front-End for it. This is just the Front-End code. You can navigate through the Webpages by just pressing Buttons From this below [Link.](https://praashoo7.github.io/Photo-Gallery-React/) You can see the Screenshot of the Pages below.<br><br>
 
 
 ## Separate Page Links
@@ -9,6 +9,11 @@ While learning Figma, I created a Design for a Restro/Hotel Management Website f
 - AddItems-Page [Link](https://praashoo7.github.io/Photo-Gallery-React/)<br>
 - Billing-Page [Link](https://praashoo7.github.io/Photo-Gallery-React/)<br>
 - Sales-Page [Link](https://praashoo7.github.io/Photo-Gallery-React/)<br><br>
+
+## Figma Link
+
+[Restro/Hotel Management Website Figma](https://unsplash.com/)<br><br>
+
 
 ## Light Mode
 ![Readme Image](ReadMe-Images/Light_Mode/Login_Light.png)
@@ -32,10 +37,6 @@ While learning Figma, I created a Design for a Restro/Hotel Management Website f
 ![Readme Image](ReadMe-Images/Dark_Mode/Billing_Dark.png)
 
 ![Readme Image](ReadMe-Images/Dark_Mode/Sales_Dark.png)<br><br>
-
-## Figma Link
-
-[Restro/Hotel Management Website](https://unsplash.com/)<br><br>
 
 
 ## License
