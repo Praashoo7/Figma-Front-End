@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items Page</title>
+    <link rel="icon" href="svg/AddItemsPage.svg">
+    <link rel="stylesheet" href="main.css">
+
+    <script>
+        // IMPORTANT: set this in <HEAD> top before any other tag.
+        const setItem = (theme) => {
+          theme ??= localStorage.theme || "light";
+          document.documentElement.dataset.theme = theme;
+          localStorage.theme = theme;
+        };
+        setItem();
+    </script>
+
+</head>
+<body>
+
+    <div class="dark" style="display: none;">
+        <label class="theme-switch" for="checkbox" id="themeswitch">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
+    
+        <main class="additemspageMain">
+            <div class="top_bar">
+                <div class="back_wrapper">
+                <button class="back_button" onclick="location.href='HomePage.html';">
+                    <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.0417 21.6666L22.375 31L20 33.3333L6.66667 20L20 6.66663L22.375 8.99996L13.0417 18.3333H33.3333V21.6666H13.0417Z" fill="black"/>
+                    </svg>                       
+                </button>
+                </div>
+                <div class="search_wrapper">
+                <input class="search" placeholder="Search" onfocusin="searchDropdownOpen()" onfocusout="searchDropdownClose()" onkeyup="filterFunction()" id="searchInput" autocomplete="off">
+                    <div id="search_options" class="search_options">
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 1</a>
+                            <button class="add_search">
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 2</a>
+                            <button class="add_search">
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 3</a>
+                            <button class="add_search">
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 4</a>
+                            <button class="add_search">
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="data_wrapper">
+                            <a class="search_data">Search Item 5</a>
+                            <button class="add_search">
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="radio">
+                <input class="radioVeg" value="Veg" name="food" id="Veg" type="radio" label="Veg" />
+                <input class="radioNonVeg" type="radio" label="NonVeg" name="food" value="NonVeg" />
+                </div>
+            </div>
+            <ul class="tables_additemspage">
+                <li id="table1" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">1</span><span class="quantity"> [ &#x2715; 2 ] </span><br>
+                        <span class="cost">220 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table2" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">2</span><span class="quantity"> [ &#x2715; 14 ] </span><br>
+                        <span class="cost">1020 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table3" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">3</span><span class="quantity"> [ &#x2715; 5 ] </span><br>
+                        <span class="cost">300 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table4" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">4</span><span class="quantity"> [ &#x2715; 8 ] </span><br>
+                        <span class="cost">650 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table5" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">5</span><span class="quantity"> [ &#x2715; 17 ] </span><br>
+                        <span class="cost">1780 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table6" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">6</span><span class="quantity"> [ &#x2715; 1 ] </span><br>
+                        <span class="cost">210 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table7" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">7</span><span class="quantity"> [ &#x2715; 24 ] </span><br>
+                        <span class="cost">720 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table8" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">8</span><span class="quantity"> [ &#x2715; 11 ] </span><br>
+                        <span class="cost">400 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table9" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">9</span><span class="quantity"> [ &#x2715; 9 ] </span><br>
+                        <span class="cost">550 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+                <li id="table10" class="table_additemspage">
+                    <span style="line-height: 1.5em;" class="item">Item <span class="item_number">10</span><span class="quantity"> [ &#x2715; 5 ] </span><br>
+                        <span class="cost">480 &#8377;</span></span>
+                    <div class="add_remove">
+                        <button class="add">
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
+                            </svg>
+                        </button>
+                        <button class="remove">
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+            <div class="bottom_bar">
+                <div class="front">
+                    <button class="disabled_button">Garden</button>
+                    <label class="note_label">Note:</label>
+                    <input class="note" placeholder="Add a Note">
+                </div>
+                <div class="add_buttons">
+                    <button class="add_items" onclick="location.href='Billing.html';">Add <span class="item_count">18</span> Items to Table<span class="table_count">1</span></span></button>
+                    <button class="bill" onclick="location.href='Billing.html';">Bill</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="small_device">Go Buy Some Pixels Bitch!</div>
+
+</body>
+</html>
+
+<script src="main.js"></script>
