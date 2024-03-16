@@ -1,4 +1,4 @@
-# [Restro/Hotel Management Website](https://praashoo7.github.io/Photo-Gallery-React/)
+## Restro/Hotel Management Website
 
 While learning Figma, I created a Design for a Restro/Hotel Management Website for a Project. And then did the Front-End for it. This is just the Front-End code. You can navigate through the Webpages by just pressing Buttons From this [Site Link.](https://praashoo7.github.io/Photo-Gallery-React/) You can see the Screenshot of the Pages below.<br>
 
