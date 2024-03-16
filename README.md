@@ -10,7 +10,7 @@ While learning Figma, I created a Design for a Restro/Hotel Management Website f
 - Billing-Page [Link](https://praashoo7.github.io/Photo-Gallery-React/)<br>
 - Sales-Page [Link](https://praashoo7.github.io/Photo-Gallery-React/)<br>
 
-CSS and JS folder have separate CSS-JS files in them for each page. If you want single CSS-JS files you can find them [here.](https://praashoo7.github.io/Photo-Gallery-React/)<br><br>
+CSS and JS folder have separate CSS-JS files in them for each page. If you want single CSS-JS files you can find<br>them [here.](https://praashoo7.github.io/Photo-Gallery-React/)<br><br>
 
 ## Figma Link
 
