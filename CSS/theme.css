@@ -1,0 +1,124 @@
+:root {
+  --bg-color : #DBC6B0;
+  --border : #B8AA9C;
+  --img-bg-color : #C7A684;
+  --black : black;
+  --input-hover : rgb(197, 174, 150, 0.5);
+  --accent0 : #DBC6B0;
+  --accent1 : #B59A7E;
+  --accent2 : #C5AE96;
+  --accent3 : #856d546b;
+  --accent4 : transparent;
+  --accent-focus1 : #C5AE96;
+  --drop-shadow : drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  --drop-shadow1 : drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  --lighter-drop-shadow : rgba(0,0,0,0.1);
+  --button-focus-hover : #C5AE96;
+  --button-focus-accent : #C5AE96;
+  --account-svg-fill : #9B7954;
+  --heading-color : #2b2b2b;
+  --tables-bg-color : #DBC6B0;
+  --bottom-bar-bg : #D2BBA3;
+  --disabled-button-bg : #DBC6B0;
+  --list-bg : #DBC6B0;
+  --dropdown-hover : #C3A88C;
+  --note-divider-border : #0000006b;
+  --price-tag-bg : #D2BBA3;
+  --sales-main-bg : #DBC6B0;
+  --border-sales-datepicker : #C5AE96;
+  --datepicker-bg : #D2BBA3;
+  --datepicker-hover : #C3A88C;
+  --datepicker-L-svg : url(svg/arrow-left.svg);
+  --datepicker-R-svg : url(svg/arrow-right.svg);
+  --custom-dropdown-hover : #c5ae9680;
+  --option-sales-bg : #D2BBA3;
+  --option-sales-bg-hover : rgb(197, 174, 150);
+  --stats-icon-bg : #CFBCA8;
+  --stats-data-sub : #7B5A42;
+  --dropdown-arrow : #B59A7E;
+  --collapsible1 : rgb(207, 188, 168, 0.5);
+  --collapsible1-hover : rgb(207, 188, 168, 1);
+}
+/* dark mode css variables */
+[data-theme="dark"] {
+  --bg-color : #28252D;
+  --border : #444346;
+  --img-bg-color : #36333A;
+  --black : #F2EBD9;
+  --input-hover : rgba(95, 86, 105, 0.363);
+  --accent0 : #DFC274;
+  --accent1 : #DFC274;
+  --accent2 : rgba(223, 195, 116, 0.65);
+  --accent3 : #DFC274;
+  --accent4 : #DFC274;
+  --accent-focus1 : #DFC274;
+  --drop-shadow : none;
+  --drop-shadow1 : drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
+  --lighter-drop-shadow : none;
+  --button-focus-hover : #413F44;
+  --button-focus-accent : #DFC274;
+  --account-svg-fill : #F2EBD9;
+  --heading-color : #e0e0e0;
+  --tables-bg-color : #413F44;
+  --bottom-bar-bg : #302E34;
+  --disabled-button-bg : #4E4C51;
+  --list-bg : #36333A;
+  --dropdown-hover : #84808871;
+  --note-divider-border : #444346;
+  --price-tag-bg : #413F44;
+  --sales-main-bg : #29262e;
+  --border-sales-datepicker : #444346;
+  --datepicker-bg : #36333A;
+  --datepicker-hover : #DFC274;
+  --datepicker-L-svg : url(svg/arrow-left-Dark.svg);
+  --datepicker-R-svg : url(svg/arrow-right-Dark.svg);
+  --custom-dropdown-hover : rgba(223, 195, 116, 0.65);
+  --option-sales-bg : #36333A;
+  --option-sales-bg-hover : #DFC274;
+  --stats-icon-bg : #413F44;
+  --stats-data-sub : #B99D52;
+  --dropdown-arrow : black;
+  --collapsible1 : rgb(54, 51, 58);
+  --collapsible1-hover : rgb(54, 51, 58, 0.5);
+}
+
+  .dark{
+    width: 100%;
+  }
+  .theme-switch {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 1.25em;
+    padding: 0.25em;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--black);
+  }
+  
+  .theme-switch:hover{
+    cursor: pointer;
+    background-color: var(--button-focus-hover);
+    letter-spacing: 0.15em;
+  }
+  
+  .theme-switch input[type=checkbox]:checked + .slider {
+    scale: 3.5;
+  }
+  
+  .theme-switch input[type=checkbox] {
+    visibility: hidden;
+  }
+
+@media screen and (max-width: 570px) {
+    .theme-switch{
+        font-size: 0.75em;
+        padding: 0.1em 0.25em 0.1em 0.1em;
+        border-radius: 3px;
+    }
+    .theme-switch:hover{
+        letter-spacing: 0.1em;
+    }
+}

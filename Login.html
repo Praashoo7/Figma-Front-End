@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="CSS/Login.css">
+    <link rel="stylesheet" href="Css/theme.css">
     <link rel="icon" href="CSS/svg/Login.svg">
+
+    <script>
+      // IMPORTANT: set this in <HEAD> top before any other tag.
+      const setItem = (theme) => {
+        theme ??= localStorage.theme || "light";
+        document.documentElement.dataset.theme = theme;
+        localStorage.theme = theme;
+      };
+      setItem();
+    </script>
+
 </head>
 <body>
   
+  <div class="dark" style="display: none;">
+    <label class="theme-switch" for="checkbox" id="themeswitch">
+        <input type="checkbox" id="checkbox">
+        <div class="slider round"></div>
+    </label>
+  </div>
+
       <main>
         <div class="wrapper">
          <div class="login_left">
@@ -26,7 +45,7 @@
               <input type="text" placeholder="Username" class="username">
               <div class="password_text">Enter Password</div>
               <div class="password_div">
-                <input type="text" id="password" placeholder="Password" class="password">
+                <input type="text" id="password" placeholder="Password" class="password" autocomplete="none">
                 <div class="hide_password">
                   <button id="passwordHideButton" aria-label="passwordHideButton">
                     <svg class="eye_main" width="24" height="24" viewBox="0 0 30 30" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -92,6 +111,7 @@
       <div class="small_device">Go Buy Some Pixels Bitch!</div>
 
       <script src="JS/Login.js"></script>
+      <script src="JS/theme.js"></script>
 
 </body>
 </html>

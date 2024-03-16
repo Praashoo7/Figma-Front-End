@@ -55,7 +55,214 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /*------------------------- CHART -------------------------*/
 
-am5.ready(function() {
+
+/*---------------------------------------------------------------------- THEME_SWITCH_START ----------------------------------------------------------------------*/
+
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+// store user preference for future visits
+function switchTheme(e) {
+  if (e.target.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark'); //add this
+  }
+  else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light'); //add this
+  }    
+}
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+        am5.ready(function() {
+                        
+            // Create root element
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            var root = am5.Root.new("chartdiv");
+            
+            // Set themes
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([
+            am5themes_Animated.new(root)
+            ]);
+        
+            
+            // Create chart
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/
+            var chart = root.container.children.push(am5xy.XYChart.new(root, {
+            panX: true,
+            panY: true,
+            wheelX: "panX",
+            wheelY: "zoomX",
+            pinchZoomX: true,
+            paddingLeft:0,
+            paddingRight:1,
+            }));
+            
+            // Add cursor
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+            cursor.lineY.set("visible", false);
+            cursor.lineX.set("visible", false);
+            
+            // Create axes
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+            var xRenderer = am5xy.AxisRendererX.new(root, { 
+            minGridDistance: 30, 
+            minorGridEnabled: true,
+            strokeOpacity: 1,
+            strokeWidth: 5,
+            stroke:"#413F44"
+            });
+        
+            xRenderer.labels.template.setAll({
+            rotation: -90,
+            centerY: am5.p50,
+            centerX: am5.p100,
+            paddingRight: 15,
+            fontFamily: "ClassyVogue",
+            fill: am5.color("#FFFFFF")
+            });
+            
+            xRenderer.grid.template.setAll({
+            opacity: 0
+            })
+            
+            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+            maxDeviation: 0.3,
+            categoryField: "country",
+            renderer: xRenderer,
+            }));
+            
+            var yRenderer = am5xy.AxisRendererY.new(root, {
+            strokeOpacity: 1,
+            strokeWidth: 5,
+            stroke:"#413F44",
+            })
+            yRenderer.labels.template.setAll({
+            paddingRight: 20,
+            fontFamily: "ClassyVogue",
+            fill: am5.color("#FFFFFF")
+            });
+            yRenderer.grid.template.setAll({
+                opacity:0
+            })
+            
+            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+            maxDeviation: 0.3,
+            renderer: yRenderer
+            }));
+            
+            // Create series
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+            // Create series
+            var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+            name: "Series 1",
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: "value",
+            sequencedInterpolation: true,
+            categoryXField: "country",
+            tooltip: am5.Tooltip.new(root, {
+                labelText: "{country} : {valueY} Rupees",
+                getFillFromSprite: true,
+                getStrokeFromSprite: true,
+                autoTextColor: true,
+                getLabelFillFromSprite: true,
+            }),
+            }));
+        
+        
+            series.columns.template.setAll({
+            fillOpacity: 0.5,
+            strokeWidth: 2,
+            cornerRadiusTL: 5,
+            cornerRadiusTR: 5
+            });
+            var tooltip = am5.Tooltip.new(root, {
+            labelText: "[fontFamily: ClassyVogue]{country} : {valueY} ₹",
+            });
+        
+            tooltip.get("background").setAll({
+            stroke: am5.color(0x413F44),
+            strokeOpacity: 0.8,
+            fillOpacity: 0.5,
+            strokeWidth: 2,
+            });
+        
+            series.set("tooltip", tooltip);
+        
+            // Set background color for bars
+            series.columns.template.set("fill", am5.color("#413F44")); // Set your desired color here
+            series.columns.template.set("stroke", am5.color("#413F44"));
+        
+        
+            // Set data
+            var data = [{
+            country: "January",
+            value: 14000
+            }, {
+            country: "February",
+            value: 7820
+            }, {
+            country: "March",
+            value: 9050
+            }, {
+            country: "April",
+            value: 10500
+            }, {
+            country: "May",
+            value: 26100
+            }, {
+            country: "June",
+            value: 12100
+            }, {
+            country: "July",
+            value: 11650
+            }, {
+            country: "August",
+            value: 20350
+            }, {
+            country: "September",
+            value: 10010
+            }, {
+            country: "October",
+            value: 15050
+            }, {
+            country: "November",
+            value: 22500
+            }, {
+            country: "December",
+            value: 26800
+            }];
+            
+            xAxis.data.setAll(data);
+            series.data.setAll(data);
+        
+        
+            // Make stuff animate on load
+            // https://www.amcharts.com/docs/v5/concepts/animations/
+            series.appear(1000);
+            chart.appear(1000, 100);
+            
+            }); // end am5.ready()
+    }
+    else if (currentTheme === 'light') {
+        am5.ready(function() {
                         
     // Create root element
     // https://www.amcharts.com/docs/v5/getting-started/#Root_element
@@ -101,7 +308,8 @@ am5.ready(function() {
     centerY: am5.p50,
     centerX: am5.p100,
     paddingRight: 15,
-    fontFamily: "ClassyVogue"
+    fontFamily: "ClassyVogue",
+    fill: am5.color("#000000")
     });
     
     xRenderer.grid.template.setAll({
@@ -121,7 +329,8 @@ am5.ready(function() {
     })
     yRenderer.labels.template.setAll({
     paddingRight: 20,
-    fontFamily: "ClassyVogue"
+    fontFamily: "ClassyVogue",
+    fill: am5.color("#000000")
     });
     yRenderer.grid.template.setAll({
         opacity:0
@@ -225,3 +434,6 @@ am5.ready(function() {
     chart.appear(1000, 100);
     
     }); // end am5.ready()
+    }
+}
+

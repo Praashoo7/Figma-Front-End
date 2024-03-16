@@ -16,13 +16,13 @@
 }
    
 ::-webkit-scrollbar-thumb {
-    background-color: #C5AB8F; 
-    border-radius: 10px;
+    background-color: var(--accent2); 
     transition: .4s ease-in-out;
-    border-top: solid 18px #DBC6B0;
-    border-bottom: solid 18px #DBC6B0;
-    border-left: solid 8px #DBC6B0;
-    border-right: solid 8px #DBC6B0;
+    border-top: solid 18px var(--list-bg);
+    border-bottom: solid 18px var(--list-bg);
+    border-left: solid 8px var(--list-bg);
+    border-right: solid 8px var(--list-bg);
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -54,10 +54,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #DBC6B0;
+    background-color: var(--bg-color);
     font-family: ClassyVogue;
     background-image: url(imgs/batthern.png);
     animation:transitionIn 0.4s;
+    transition: .4s ease-in-out;
 }
 @keyframes transitionIn{
     from{opacity: 0;}
@@ -87,7 +88,7 @@ main{
     align-items: center;
     justify-content: start;
     column-gap: 1em;
-    padding: 1em;
+    padding: 1.5em 1em 1em 1em;
 }
 
 .back_svg{
@@ -102,11 +103,11 @@ main{
     align-items: center;
     justify-content: center;
     padding: 0.75em;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--accent0);
     outline: none;
     border-radius: 10px;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    filter: var(--drop-shadow);
     transition: .2s ease-in-out;
     cursor: pointer;
 }
@@ -114,7 +115,7 @@ main{
     filter: none;
 }
 .back_button:focus{
-    background-color: #C5AE96;
+    background-color: var(--accent-focus1);
     filter: none;
 }
 
@@ -136,12 +137,13 @@ main{
     padding: 0.85em;
     font-size: 1.25em;
     font-family: ClassyVogue;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--bg-color);
     border-radius: 10px;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    filter: var(--drop-shadow);
     outline: none;
     transition: .2s ease-in-out;
+    color: var(--black);
 }
 .search:focus{
     filter: none;
@@ -160,19 +162,32 @@ main{
 }
 .search_data{
     width: 100%;
+    color: var(--black);
 }
 .add_search{
     margin: 1em;
-    padding: 0.5em;
-    border: none;
-    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
-    transition: .2s ease-in-out;
+    outline: none;
+    border: none;
+    transition: .4s ease-in-out;
+    padding: 0.5em;
     border-radius: 10px;
     cursor: pointer;
 }
 .add_search:hover{
-    background-color: #C5AE96;
+    background-color: var(--accent2);
+}
+.add_search:hover .add_svg{
+    fill: black;
+}
+.search_data .add_search .add_svg{
+    fill: var(--black);
+}
+.search_data .add_search:hover .add_svg{
+    fill: black;
 }
 .search_options {
     opacity: 0;
@@ -180,8 +195,8 @@ main{
     position: absolute;
     align-self: start;
     justify-self: start;
-    border: 2px solid #B8AA9C;
-    background-color: #D2BBA3;
+    border: 2px solid var(--border);
+    background-color: var(--bg-color);
     width: 85%;
     border-radius: 10px;
     font-size: 1.1em;
@@ -189,11 +204,11 @@ main{
     z-index: 1;
     margin-top: 3.5em;
     transition: .4s ease-in-out;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    filter: var(--drop-shadow);
 }
   
 .search_options a {
-    color: black;
+    color: var(--black);
     padding: 12px 16px;
     margin: 0.75em 0 0.75em 0.5em;
     text-decoration: none;
@@ -204,7 +219,7 @@ main{
 }
 
 .search_options a:hover{
-    background-color: #C3A88C;
+    background-color: var(--dropdown-hover);
 }
 
 .show {display: block;}
@@ -227,14 +242,14 @@ input[type="radio"]{
     width: 4em;
     height: 4em;
     color: black;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--bg-color);
     transition: .2s ease-in-out;
     cursor: pointer;
     border-radius: 10px;
 }
 input[type="radio"]:checked{
-    background-color: #C5AE96;
+    background-color: var(--button-focus-hover);
 }
 .radioVeg::after{
     content: '';
@@ -269,10 +284,10 @@ input[type="radio"]:checked{
     justify-content: space-between;
     column-gap: 1em;
     padding: 0.45em;
-    background-color: #D2BBA3;
-    border: 2px solid #B8AA9C;
+    background-color: var(--bottom-bar-bg);
+    border: 2px solid var(--border);
     border-radius: 15px;
-    margin: 1em;
+    margin: 1em 1em 1.5em 1em;
 }
 
 .front{
@@ -283,9 +298,10 @@ input[type="radio"]:checked{
 }
 
 .disabled_button{
+    color: var(--black);
     padding: 1em;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--disabled-button-bg);
     outline: none;
     font-size: 1.25em;
     border-radius: 10px;
@@ -295,6 +311,7 @@ input[type="radio"]:checked{
 }
 .note_label{
     font-size: 1.3em;
+    color: var(--black);
 }
 .note{
     width: 100%;
@@ -306,14 +323,15 @@ input[type="radio"]:checked{
     font-size: 1.25em;
     font-family: ClassyVogue;
     border: none;
-    border-bottom: 2px solid #B8AA9C;
+    border-bottom: 2px solid var(--border);
     outline: none;
     background-color: transparent;
     transition: .2s ease-in-out;
+    color: var(--black);
 }
 .note:focus{
     border-radius: 10px;
-    background-color: #C5AE96;
+    background-color: var(--input-hover);
 }
 .note::placeholder{
     opacity: 0;
@@ -327,8 +345,8 @@ input[type="radio"]:checked{
 }
 .add_items, .bill{
     padding: 1em;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--accent0);
     outline: none;
     font-size: 1.25em;
     border-radius: 10px;
@@ -337,7 +355,7 @@ input[type="radio"]:checked{
     transition: .2s ease-in-out;
 }
 .add_items:hover, .bill:hover{
-    background-color: #C5AE96;
+    background-color: var(--accent2);
 }
 
 /* ------------------------------------------ TABLES ------------------------------------------*/
@@ -349,14 +367,15 @@ input[type="radio"]:checked{
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    background-color: #DBC6B0;
-    outline: 3px solid #B8AA9C;
+    background-color: var(--list-bg);
+    outline: 3px solid var(--border);
     border-radius: 20px;
     padding: 1.5em 0em 1.5em 1.5em;
     gap: 1.5em;
     overflow-y: scroll;
     overflow-x: hidden;
     margin: 0.5em;
+    color: var(--black);
 }
 
 .table{
@@ -367,9 +386,9 @@ input[type="radio"]:checked{
     font-size: 1.3em;
     align-items: center;
     justify-content: space-between;
-    background-color: #DBC6B0;
+    background-color: var(--list-bg);
     border: none;
-    border-bottom: 3px solid #B8AA9C;
+    border-bottom: 3px solid var(--border);
     transition: .2s ease-in-out;
     cursor: pointer;
 }
@@ -377,9 +396,17 @@ input[type="radio"]:checked{
     filter: none;
 }
 
+.add_remove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5em;
+}
 .add_svg, .remove_svg{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    fill: var(--black);
+    transition: .4s ease-in-out;
 }
 .add, .remove{
     padding: 0.5em;
@@ -391,7 +418,10 @@ input[type="radio"]:checked{
     cursor: pointer;
 }
 .add:hover, .remove:hover{
-    background-color: #C5AE96;
+    background: var(--accent2);
+}
+.add:hover .add_svg, .remove:hover .remove_svg{
+    fill: black;
 }
 
 
@@ -406,6 +436,7 @@ input[type="radio"]:checked{
     justify-content: center;
     margin: 0.5em;
     text-align: center;
+    color: var(--black);
 }
 
 
@@ -445,7 +476,7 @@ input[type="radio"]:checked{
         height: 20px;
     }
     .bottom_bar{
-       margin: 0.5em;
+        margin: 0.5em 1.5em 1.5em 1.5em;
     }
     .search_options {
         transform: translateX(1.75em);

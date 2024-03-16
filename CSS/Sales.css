@@ -16,13 +16,13 @@
 }
    
 ::-webkit-scrollbar-thumb {
-    background-color: #C5AB8F; 
-    border-radius: 10px;
+    background-color: var(--accent2); 
     transition: .4s ease-in-out;
-    border-top: solid 18px #DBC6B0;
-    border-bottom: solid 18px #DBC6B0;
-    border-left: solid 8px #DBC6B0;
-    border-right: solid 8px #DBC6B0;
+    border-top: solid 18px var(--bg-color);
+    border-bottom: solid 18px var(--bg-color);
+    border-left: solid 8px var(--bg-color);
+    border-right: solid 8px var(--bg-color);
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -53,10 +53,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #DBC6B0;
+    background-color: var(--bg-color);
     font-family: ClassyVogue;
     background-image: url(imgs/batthern.png);
     animation:transitionIn 0.4s;
+    transition: .4s ease-in-out;
 }
 @keyframes transitionIn{
     from{opacity: 0;}
@@ -90,7 +91,7 @@ main{
     align-items: center;
     justify-content: start;
     column-gap: 1em;
-    padding: 1em;
+    padding: 1.5em 1em 1em 1em;
 }
 
 .back_svg{
@@ -105,11 +106,11 @@ main{
     align-items: center;
     justify-content: center;
     padding: 0.75em;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--accent0);
     outline: none;
     border-radius: 10px;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    filter: var(--drop-shadow);
     transition: .2s ease-in-out;
     cursor: pointer;
 }
@@ -117,7 +118,7 @@ main{
     filter: none;
 }
 .back_button:focus{
-    background-color: #C5AE96;
+    background-color: var(--accent-focus1);
     filter: none;
 }
 
@@ -129,8 +130,9 @@ main{
     font-size: 1.75em;
     width: 100%;
     height: 90%;
+    color: var(--black);
     border: none;
-    border-bottom: 3px solid #B8AA9C;
+    border-bottom: 3px solid var(--border);
     background-color: transparent;
 }
 
@@ -143,8 +145,8 @@ main{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background-color: #DBC6B0;
-    border: 3px solid #B8AA9C;
+    background-color: var(--sales-main-bg);
+    border: 3px solid var(--border);
     border-radius: 20px;
     gap: 1em;
     padding-bottom: 1em;
@@ -162,10 +164,11 @@ main{
     width: 100%;
     font-size: 1.25em;
     border-radius: 15px 15px 0 0;
-    background-color: #D2BBA3;
+    background-color: var(--price-tag-bg);
+    color: var(--black);
     padding: 0.75em 0.75em 0.75em 1em;
     border: none;
-    border-bottom: 3px solid #B8AA9C;
+    border-bottom: 3px solid var(--border);
     z-index: 3;
 }
 .sales_title{
@@ -179,7 +182,6 @@ main{
     justify-content: end;
     width: 100%;
     gap: 0.7em;
-    margin: 0 0.8em 0 0;
 }
 
 /* ------------------------------------------ DATE-PICKER ------------------------------------------*/
@@ -207,8 +209,8 @@ main{
 	border-radius: 10px;
 	line-height: 1.5rem;
     font-family: ClassyVogue;
-    border: 2px solid #C5AE96;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border-sales-datepicker);
+    background-color: var(--accent0);
 	font-size: 1rem;
 	color: black;
 	width: 7em;
@@ -218,17 +220,18 @@ main{
     padding-top: 0.15em;
 }
 .datepicker_input:hover{
-    background-color: #C5AE96;
+    background-color: var(--accent2);
 }
 .datepicker_input:focus{
-    background-color: #C5AE96;
+    background-color: var(--accent2);
 }
 .datepicker_input:focus {outline: none;}
 #ui-datepicker-div {
 	display: none;
-	border: 2px solid #C5AE96;
-    background-color: #D2BBA3;
-	box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+	border: 2px solid var(--border-sales-datepicker);
+    background-color: var(--datepicker-bg);
+    color: var(--black);
+	box-shadow: var(--lighter-drop-shadow);
 	margin-top: 0.3rem;
     transform: translateX(-4em);
     border-radius: 10px;
@@ -245,7 +248,7 @@ table {
 	text-align: center;
 	font-size: 0.875rem;
 	font-weight: 400;
-	color: black;
+	color: var(--black);
 }
 .ui-datepicker-calendar tbody td {
 	width: 2.5rem;
@@ -257,15 +260,16 @@ table {
 	border-radius: 0.25rem;
 	line-height: 2rem;
 	transition: 0.3s all;
-	color: black;
+	color: var(--black);
 	font-size: 0.875rem;
 	text-decoration: none;
 }
 .ui-datepicker-calendar tbody td a:hover {	
-	background-color: #C3A88C;
+	background-color: var(--datepicker-hover);
+    color: black;
 }
 .ui-datepicker-calendar tbody td a.ui-state-active {
-	background-color: #C3A88C;
+	background-color: var(--datepicker-hover);
 	color: black;
 }
 .ui-datepicker-header a.ui-corner-all {
@@ -279,11 +283,11 @@ table {
 	transition: 0.3s all;
 }
 .ui-datepicker-header a.ui-corner-all:hover {
-	background-color: #C3A88C;
+	background-color: var(--dropdown-hover);
 }
 .ui-datepicker-header a.ui-datepicker-prev {	
 	left: 0;	
-	background: url(svg/arrow-left.svg);
+	background: var(--datepicker-L-svg);
 	background-repeat: no-repeat;
 	background-size: 0.5rem;
 	background-position: 50%;
@@ -291,7 +295,7 @@ table {
 }
 .ui-datepicker-header a.ui-datepicker-next {
 	right: 0;
-	background: url(svg/arrow-right.svg);
+	background: var(--datepicker-R-svg);
 	background-repeat: no-repeat;
 	background-size: 10px;
 	background-position: 50%;
@@ -320,14 +324,18 @@ table {
 .custom_dropdown {
     position: relative;
     width: 6.5em;
-    border: 2px solid #C5AE96;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border-sales-datepicker);
+    background-color: var(--accent0);
+    color: black;
     border-radius: 10px;
     font-size: 0.8em;
     transition: .2s ease-in-out;
 }
 .custom_dropdown:hover{
-    background-color: rgb(197, 174, 150, 0.5);
+    background-color: var(--custom-dropdown-hover);
+}
+.custom_dropdown:focus{
+    background-color: var(--custom-dropdown-hover);
 }
 .selected_option_sales, .selected_option_billing {
     padding: 10px;
@@ -343,10 +351,12 @@ table {
     list-style: none;
     padding: 0;
     margin: 0.4em 1em 0 0;
-    border: 2px solid #C5AE96;
-    background-color: #D2BBA3;
+    border: 2px solid var(--border-sales-datepicker);
+    background-color: var(--option-sales-bg);
     box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
     border-radius: 10px;
+    font-size: 0.85em;
+    text-align: center;
     overflow: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
 }
@@ -355,12 +365,15 @@ table {
     opacity: 1;
     display: block;
     visibility: visible;
+    text-align: center;
     position: absolute;
     list-style: none;
     padding: 0;
     margin: 0.4em 1em 0 0;
-    border: 2px solid #C5AE96;
-    background-color: #D2BBA3;
+    font-size: 0.85em;
+    color: var(--black);
+    border: 2px solid var(--border-sales-datepicker);
+    background-color: var(--option-sales-bg);
     box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
     border-radius: 10px;
     overflow: hidden;
@@ -371,22 +384,22 @@ table {
 }
 .options_sales li, .options_billing li {
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 .options_sales li:hover, .options_billing li:hover {
-    margin: 5px;
     border-radius: 5px;
-    background-color: rgb(197, 174, 150);
+    background-color: var(--option-sales-bg-hover);
+    color: black;
 }
 .custom_arrow_sales, .custom_arrow_bill {
     position: absolute;
-    margin-top: 0.85em;
+    margin-top: 0.9em;
     margin-right: 0.85em;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #B59A7E;
+    border-top: 5px solid var(--dropdown-arrow);
 }
 
 
@@ -422,15 +435,17 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #CFBCA8;
+    background-color: var(--stats-icon-bg);
 }
 .stats_icon_svg{
     width: 25px;
     height: 25px;
+    fill: var(--black);
 }
 .stats_icon_svgP{
     width: 33px;
     height: 24px;
+    fill: var(--black);
 }
 .stats_data{
     display: flex;
@@ -438,9 +453,10 @@ table {
     gap: 0.15em;
     justify-content: center;
     flex-direction: column;
+    color: var(--black);
 }
 .stats_data_sub{
-    color: #7B5A42;
+    color: var(--stats-data-sub);
 }
   
 
@@ -473,8 +489,8 @@ table {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background-color: #DBC6B0;
-    border: 3px solid #B8AA9C;
+    background-color: var(--sales-main-bg);
+    border: 3px solid var(--border);
     border-radius: 20px;
     gap: 1em;
     padding-bottom: 1em;
@@ -487,10 +503,11 @@ table {
     width: 100%;
     font-size: 1.25em;
     border-radius: 15px 15px 0 0;
-    background-color: #D2BBA3;
+    background-color: var(--price-tag-bg);
+    color: var(--black);
     padding: 0.75em 0.75em 0.75em 1em;
     border: none;
-    border-bottom: 3px solid #B8AA9C;
+    border-bottom: 3px solid var(--border);
     z-index: 3;
 }
 .bills_title{
@@ -516,7 +533,7 @@ table {
 
 .collapsible {
     background-color: transparent;
-    color: black;
+    color: var(--black);
     cursor: pointer;
     font-family: ClassyVogue;
     padding: 1em;
@@ -529,7 +546,7 @@ table {
     outline: none;
     font-size: 1.25em;
     transition: .2s ease-in-out;
-    background-color: rgb(207, 188, 168, 0.5);
+    background-color: var(--collapsible1);
 }
 .collapsible::after{
     content: '';
@@ -541,11 +558,11 @@ table {
     transition: .2s ease-in-out;
 }
 .collapsible:hover {
-    background-color: rgb(207, 188, 168, 1);
+    background-color: var(--collapsible1-hover);
 }
 .active{
-    background-color: rgb(207, 188, 168, 1);
-    border-radius: 20px 20px 0 0;
+    background-color: var(--collapsible1-hover);
+    border-radius: 10px 10px 0 0;
     padding: 1.5em 0 0.5em 2.5em;
 }
 .collapsible.active::after {
@@ -564,8 +581,9 @@ table {
   
 .bills_scroll .header {
     width: 98%;
-    background-color: #D2BBA3;
-    border: 3px solid #C5AE96;
+    background-color: var(--price-tag-bg);
+    border: 3px solid var(--border);
+    color: var(--black);
     padding: 1.5em;
     text-align: center;
     border-radius: 10px;
@@ -581,10 +599,10 @@ table {
     justify-content: start;
     flex-direction: column;
     background-color: transparent;
-    border: 3px solid #B8AA9C;
+    border: 3px solid var(--border);
     width: 96%;
     margin: 0 1em 0.5em 1em;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
 }
 .content {
@@ -595,10 +613,10 @@ table {
     flex-direction: column;
     justify-content: center;
     max-height: 0;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: rgb(207, 188, 168, 1);
+    background-color: var(--collapsible1-hover);
 }
 
 
@@ -611,8 +629,8 @@ table {
     flex-direction: column;
     width: 99%;
     height: 29em;
-    background-color: #DBC6B0;
-    outline: 3px solid #B8AA9C;
+    background-color: var(--sales-main-bg);
+    outline: 3px solid var(--border);
     border-radius: 20px 20px 0 0;
     padding: 1.5em;
     gap: 1.5em;
@@ -629,9 +647,10 @@ table {
     font-size: 1.5em;
     align-items: center;
     justify-content: space-between;
-    background-color: #DBC6B0;
+    background-color: var(--sales-main-bg);
     border: none;
-    border-bottom: 3px solid #B8AA9C;
+    color: var(--black);
+    border-bottom: 3px solid var(--border);
     transition: .2s ease-in-out;
     cursor: pointer;
 }
@@ -665,8 +684,9 @@ table {
     font-size: 1.5em;
     margin-bottom: 1.5em;
     justify-content: space-between;
-    background-color: #D2BBA3;
-    outline: 3px solid #B8AA9C;
+    background-color: var(--price-tag-bg);
+    outline: 3px solid var(--border);
+    color: var(--black);
     border-radius: 0 0 20px 20px;
 }
 
@@ -681,6 +701,7 @@ table {
     justify-content: center;
     margin: 0.5em;
     text-align: center;
+    color: var(--black);
 }
 
 
@@ -769,7 +790,6 @@ table {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #CFBCA8;
     }
     .stats_icon_svg{
         width: 20px;
@@ -802,7 +822,8 @@ table {
     }
     .sales{
         font-size: 1.25em;
-        border-bottom: 2px solid #B8AA9C;
+        height: 100%;
+        padding: 0.25em 0 0.5em 0.5em;
     }
     .ss_top{
         padding: 0.75em;
@@ -814,7 +835,7 @@ table {
         width: auto;
     }
     .datepicker_input{
-        width: 5.65em;
+        width: 6.5em;
         height: 2.2em;
         padding-top: 0;
     }

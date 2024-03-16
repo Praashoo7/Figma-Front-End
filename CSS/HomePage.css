@@ -9,19 +9,21 @@
 
 ::-webkit-scrollbar {
     width: 20px;
+    transition: .4s ease-in-out;
 }
   
 ::-webkit-scrollbar-track {
     background-color: transparent;
+    transition: .4s ease-in-out;
 }
    
 ::-webkit-scrollbar-thumb {
-    background-color: #C5AB8F; 
+    background-color: var(--accent2); 
     transition: .4s ease-in-out;
-    border-top: solid 18px #DBC6B0;
-    border-bottom: solid 18px #DBC6B0;
-    border-left: solid 8px #DBC6B0;
-    border-right: solid 8px #DBC6B0;
+    border-top: solid 18px var(--bg-color);
+    border-bottom: solid 18px var(--bg-color);
+    border-left: solid 8px var(--bg-color);
+    border-right: solid 8px var(--bg-color);
     border-radius: 10px;
     cursor: pointer;
 }
@@ -54,10 +56,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #DBC6B0;
+    background-color: var(--bg-color);
     font-family: ClassyVogue;
     background-image: url(imgs/batthern.png);
     animation:transitionIn 0.4s;
+    transition: .4s ease-in-out;
 }
 @keyframes transitionIn{
     from{opacity: 0;}
@@ -92,6 +95,7 @@ main{
 .account_svg{
     width: 18px;
     height: 18px;
+    fill: var(--account-svg-fill);
 }
 
 .account_button{
@@ -99,12 +103,12 @@ main{
     align-items: center;
     justify-content: center;
     padding: 0.75em;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--bg-color);
     outline: none;
     margin: 1em -1em 1em 1em;
     border-radius: 10px;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    filter: var(--drop-shadow);
     transition: .2s ease-in-out;
     cursor: pointer;
 }
@@ -112,12 +116,8 @@ main{
     filter: none;
 }
 .account_button:focus{
-    background-color: #C5AE96;
+    background-color: var(--button-focus-hover);
     filter: none;
-}
-
-.account_button:focus ~ .account_menu{
-    opacity: 1;
 }
 
 
@@ -126,18 +126,18 @@ main{
 .account_menu{
     opacity: 0;
     position: absolute;
-    margin-top: 10em;
+    margin-top: 13em;
     margin-right: -0.75em;
-    display: flex;
+    display: none;
     flex-direction: column;
     row-gap: .25em;
     align-items: end;
     padding: 0 0.7em 0 0.7em;
     justify-content: center;
     width: 190px;
-    height: 100px;
-    border: 1px solid #B8AA9C;
-    background-color: #DBC6B0;
+    height: 150px;
+    border: 1px solid var(--border);
+    background-color: var(--bg-color);
     border-radius: 15px;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
     transition: .2s ease-in-out;
@@ -145,7 +145,7 @@ main{
 }
 .divider{
     width: 100%;
-    border: 1px solid #B8AA9C;
+    border: 1px solid var(--border);
 }
 .sales, .logout{
     width: 100%;
@@ -157,9 +157,10 @@ main{
     transition: .2s ease-in-out;
     cursor: pointer;
     border-radius: 5px;
+    color: var(--black);
 }
 .sales:hover, .logout:hover{
-    background-color: #C5AE96;
+    background-color: var(--button-focus-hover);
     letter-spacing: 0.15em;
 }
 
@@ -173,14 +174,16 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: .4s ease-in-out;
 }
 
 .hotel{
     font-family: AestheticRegular;
     font-size: 3.5em;
+    color: var(--black);
 }
 .management{
-    color: #2B2B2B;
+    color: var(--heading-color);
     opacity: 0.4;
     font-family: Brownhill;
     font-size: 3.5em;
@@ -212,19 +215,21 @@ main{
 .hall, .garden, .back{
     outline: none;
     padding: 0.75em;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--bg-color);
     transition: .4s ease-in-out;
     cursor: pointer;
     font-size: 1.15em;
     font-family: ClassyVogue;
     border-radius: 10px;
+    color: var(--black);
 }
 .hall:hover, .garden:hover, .back:hover{
-    background-color: #C5AE96;
+    background-color: var(--button-focus-hover);
 }
 .hall:focus, .garden:focus, .back:focus{
-    background-color: #C5AE96;
+    color: black;
+    background-color: var(--button-focus-accent);
 }
 
 
@@ -245,6 +250,8 @@ main{
     align-items: center;
     justify-content: center;
     column-gap: 0.5em;
+    transition: .4s ease-in-out;
+    color: var(--black);
 }
 
 .empty_color_indicator, .running_color_indicator, .pending_color_indicator{
@@ -276,14 +283,15 @@ main{
 .custom_dropdown {
     position: relative;
     width: 10em;
-    border: 2px solid #B8AA9C;
-    background-color: #DBC6B0;
+    border: 2px solid var(--border);
+    background-color: var(--bg-color);
+    color: var(--black);
     border-radius: 10px;
     font-size: 0.95em;
     transition: .2s ease-in-out;
 }
 .custom_dropdown:hover{
-    background-color: #D2BBA3;
+    background-color: var(--button-focus-hover);
 }
 .selected_option {
     padding: 10px;
@@ -299,9 +307,9 @@ main{
     list-style: none;
     padding: 0;
     margin: 0.4em 1em 0 0;
-    border: 2px solid #C5AE96;
-    background-color: #D2BBA3;
-    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    border: 2px solid var(--border);
+    background-color: var(--img-bg-color);
+    box-shadow: 0 0.125rem 0.5rem var(--lighter-drop-shadow);
     border-radius: 10px;
     overflow: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
@@ -315,9 +323,9 @@ main{
     list-style: none;
     padding: 0;
     margin: 0.4em 1em 0 0;
-    border: 2px solid #C5AE96;
-    background-color: #D2BBA3;
-    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    border: 2px solid var(--border);
+    background-color: var(--img-bg-color);
+    box-shadow: 0 0.125rem 0.5rem var(--lighter-drop-shadow);
     border-radius: 10px;
     overflow: hidden;
     transition: opacity 0.2s ease-in-out;
@@ -334,14 +342,14 @@ main{
 .options li:hover {
     margin: 5px;
     border-radius: 5px;
-    background-color: rgb(197, 174, 150);
+    background-color: var(--button-focus-hover);
 }
 .custom_arrow {
     position: absolute;
     margin-right: 15px;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #B59A7E;
+    border-top: 5px solid var(--accent1);
 }
 
 
@@ -354,14 +362,15 @@ main{
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    background-color: #DBC6B0;
-    outline: 3px solid #B8AA9C;
+    background-color: var(--bg-color);
+    outline: 3px solid var(--border);
     border-radius: 20px;
     padding: 1.5em 0em 1.5em 1.5em;
     gap: 1.5em;
     overflow-y: scroll;
     overflow-x: hidden;
-    margin: 1em;
+    margin: 1.5em;
+    transition: .4s ease-in-out;
 }
 
 .table{
@@ -376,16 +385,18 @@ main{
     width: 420px;
     min-height: 220px;
     height: 420px;
+    color: var(--black);
     aspect-ratio: 1/1;
-    background-color: #DBC6B0;
-    border: 3px solid #B8AA9C;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    background-color: var(--tables-bg-color);
+    border: 3px solid var(--border);
+    filter: var(--drop-shadow1);
     border-radius: 15px;
-    transition: .2s ease-in-out;
+    transition: .4s ease-in-out;
     cursor: pointer;
 }
 .table:hover{
     filter: none;
+    scale: 0.995;
 }
 
 
@@ -509,6 +520,7 @@ svg{
     justify-content: center;
     margin: 0.5em;
     text-align: center;
+    color: var(--black);
 }
 
 
@@ -595,8 +607,8 @@ svg{
     }
     .account_menu{
         width: 100px;
-        height: 50px;
-        margin-top: 6em;
+        height: 75px;
+        margin-top: 7em;
         border-radius: 10px;
         margin-right: 0.85em;
         row-gap: 0.1em;

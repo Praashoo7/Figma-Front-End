@@ -6,8 +6,27 @@
     <title>Add Items Page</title>
     <link rel="icon" href="CSS/svg/AddItemsPage.svg">
     <link rel="stylesheet" href="CSS/AddItemsPage.css">
+    <link rel="stylesheet" href="Css/theme.css">
+
+    <script>
+        // IMPORTANT: set this in <HEAD> top before any other tag.
+        const setItem = (theme) => {
+          theme ??= localStorage.theme || "light";
+          document.documentElement.dataset.theme = theme;
+          localStorage.theme = theme;
+        };
+        setItem();
+      </script>
+      
 </head>
 <body>
+
+    <div class="dark" style="display: none;">
+        <label class="theme-switch" for="checkbox" id="themeswitch">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
     
         <main>
             <div class="top_bar">
@@ -24,40 +43,40 @@
                         <div class="data_wrapper">
                             <a class="search_data">Search Item 1</a>
                             <button class="add_search">
-                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                                 </svg>
                             </button>
                         </div>
                         <div class="data_wrapper">
                             <a class="search_data">Search Item 2</a>
                             <button class="add_search">
-                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                                 </svg>
                             </button>
                         </div>
                         <div class="data_wrapper">
                             <a class="search_data">Search Item 3</a>
                             <button class="add_search">
-                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                                 </svg>
                             </button>
                         </div>
                         <div class="data_wrapper">
                             <a class="search_data">Search Item 4</a>
                             <button class="add_search">
-                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                                 </svg>
                             </button>
                         </div>
                         <div class="data_wrapper">
                             <a class="search_data">Search Item 5</a>
                             <button class="add_search">
-                                <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                                <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                                 </svg>
                             </button>
                         </div>
@@ -74,13 +93,13 @@
                         <span class="cost">220 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -90,13 +109,13 @@
                         <span class="cost">1020 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -106,13 +125,13 @@
                         <span class="cost">300 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -122,13 +141,13 @@
                         <span class="cost">650 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -138,13 +157,13 @@
                         <span class="cost">1780 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -154,13 +173,13 @@
                         <span class="cost">210 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -170,13 +189,13 @@
                         <span class="cost">720 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -186,13 +205,13 @@
                         <span class="cost">400 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -202,13 +221,13 @@
                         <span class="cost">550 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -218,13 +237,13 @@
                         <span class="cost">480 &#8377;</span></span>
                     <div class="add_remove">
                         <button class="add">
-                            <svg class="add_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z" fill="black"/>
+                            <svg class="add_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9166 27.0833H10.4166V22.9166H22.9166V10.4166H27.0833V22.9166H39.5833V27.0833H27.0833V39.5833H22.9166V27.0833Z"/>
                             </svg>
                         </button>
                         <button class="remove">
-                            <svg class="remove_svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z" fill="black"/>
+                            <svg class="remove_svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4166 27.0833V22.9166H39.5833V27.0833H10.4166Z"/>
                             </svg>
                         </button>
                     </div>
@@ -249,3 +268,4 @@
 </html>
 
 <script src="JS/AddItemsPage.js"></script>
+<script src="JS/theme.js"></script>
