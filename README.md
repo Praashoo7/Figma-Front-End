@@ -1,6 +1,6 @@
 # [Restro/Hotel Management Website](https://praashoo7.github.io/Photo-Gallery-React/)
 
-While learning Figma, I created a Design for a Restro/Hotel Management Website for a Project. And then did the Front-End work for it. Below are Screenshot of the Pages.<br>
+While learning Figma, I created a Design for a Restro/Hotel Management Website for a Project. And then did the Front-End work for it. Below are Screenshot of the Pages.<br><br>
 
 ## Light Mode
 ![Readme Image](ReadMe-Images/Light_Mode/Login_Light.png)
