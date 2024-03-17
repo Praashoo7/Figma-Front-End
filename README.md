@@ -49,9 +49,9 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
   - Brownhill Script Font from [FontSpace](https://www.fontspace.com/brownhill-script-font-f46547) by sizimon.
   - Classy Vogue Font from [FontSpace](https://www.fontspace.com/classy-vogue-font-f76295) by variatype.
 
-- SVGS are from [svgrepo](https://www.svgrepo.com/).
+- SVGS are from [SVG Repo.](https://www.svgrepo.com/)
 - Login Image is from [Unsplash](https://unsplash.com/) by Sehajpal Singh.
-- Background texture is from [transparentpatterns](https://www.transparenttextures.com/).<br><br>
+- Background texture is from [Transparent Textures.](https://www.transparenttextures.com/)<br><br>
 
 
 ## License
