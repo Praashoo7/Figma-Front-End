@@ -7,7 +7,7 @@ CSS and JS folder have separate CSS-JS files in them for each page. If you want 
 
 ## Figma Link
 
-[Restro/Hotel Management Website Figma](https://www.figma.com/file/QuajVMh3wftRJoL2ydSVhd/Untitled?type=design&node-id=0%3A1&mode=design&t=aDzQbuhSTRbYdBDx-1)<br><br>
+- [Figma](https://www.figma.com/file/QuajVMh3wftRJoL2ydSVhd/Untitled?type=design&node-id=0%3A1&mode=design&t=aDzQbuhSTRbYdBDx-1)<br><br>
 
 
 ## Light Mode
