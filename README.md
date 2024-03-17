@@ -2,7 +2,7 @@
 
 While learning Figma, I created a Design for a Restro/Hotel Management Website for a Project. And then did the Front-End for it. This is just the Front-End code. You can navigate through the Webpages by just pressing Buttons From this [Site Link.](https://praashoo7.github.io/Figma-Front-End/) You can see the Screenshot of the Pages below.<br>
 
-CSS and JS folder have separate CSS-JS files in them for each page. If you want single CSS-JS files you can find<br>them [here.](https://github.com/Praashoo7/Figma-Front-End/tree/main/SINGLE-CSS-JS)<br><br>
+If you prefer single CSS and JS files instead of separate ones for each page, you can find them [here.](https://github.com/Praashoo7/Figma-Front-End/tree/main/SINGLE-CSS-JS)<br><br>
 
 
 ## Figma Link
