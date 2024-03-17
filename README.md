@@ -50,8 +50,8 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
   - Classy Vogue Font from [FontSpace](https://www.fontspace.com/classy-vogue-font-f76295) by variatype.
 
 - SVGS are from [svgrepo](https://www.svgrepo.com/).
-- Imgae is from [Unsplash](https://unsplash.com/) by Sehajpal Singh.
-- Background Image is from [transparentpatterns](https://www.transparenttextures.com/).
+- Login Image is from [Unsplash](https://unsplash.com/) by Sehajpal Singh.
+- Background texture is from [transparentpatterns](https://www.transparenttextures.com/).
 
 
 ## License
