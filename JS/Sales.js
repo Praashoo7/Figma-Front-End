@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var optionsList = document.querySelector('.options_sales');
 
     selectedOption.addEventListener('click', function () {
-        optionsList.classList.toggle('active'); // Toggle the active class
+        optionsList.classList.toggle('active');
     });
 
     optionsList.addEventListener('click', function (event) {
         if (event.target.tagName === 'LI') {
             selectedOption.textContent = event.target.textContent;
-            optionsList.classList.remove('active'); // Hide the options
+            optionsList.classList.remove('active');
             var selectedValue = event.target.getAttribute('data_value');
             console.log('Selected Value:', selectedValue);
         }
@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var optionsList = document.querySelector('.options_billing');
 
     selectedOption.addEventListener('click', function () {
-        optionsList.classList.toggle('active'); // Toggle the active class
+        optionsList.classList.toggle('active');
     });
 
     optionsList.addEventListener('click', function (event) {
         if (event.target.tagName === 'LI') {
             selectedOption.textContent = event.target.textContent;
-            optionsList.classList.remove('active'); // Hide the options
+            optionsList.classList.remove('active');
             var selectedValue = event.target.getAttribute('data_value');
             console.log('Selected Value:', selectedValue);
         }
@@ -70,15 +70,15 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
-// store user preference for future visits
+
 function switchTheme(e) {
   if (e.target.checked) {
       document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark'); //add this
+      localStorage.setItem('theme', 'dark');
   }
   else {
       document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light'); //add this
+      localStorage.setItem('theme', 'light');
   }    
 }
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;

@@ -47,7 +47,7 @@ searchLinks.forEach(function(link) {
 
 /* --------------------- ADD-SEARCH-VALUE-BTN --------------------- */
 
-var addBtns = document.querySelectorAll('.add_svg');
+var addBtns = document.querySelectorAll('.add_search');
 addBtns.forEach(function(btn) {
     btn.onclick = function() {
 
