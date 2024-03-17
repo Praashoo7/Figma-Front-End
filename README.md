@@ -10,14 +10,6 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
 - [Figma](https://www.figma.com/file/QuajVMh3wftRJoL2ydSVhd/Untitled?type=design&node-id=0%3A1&mode=design&t=aDzQbuhSTRbYdBDx-1)<br><br>
 
 
-## Pages
-- Login-Page [Link](https://praashoo7.github.io/Figma-Front-End/index.html)<br>
-- Home-Page [Link](https://praashoo7.github.io/Figma-Front-End/HomePage.html)<br>
-- AddItems-Page [Link](https://praashoo7.github.io/Figma-Front-End/AddItemsPage.html)<br>
-- Billing-Page [Link](https://praashoo7.github.io/Figma-Front-End/Billing.html)<br>
-- Sales-Page [Link](https://praashoo7.github.io/Figma-Front-End/Sales.html)<br><br>
-
-
 ## Light Mode
 ![Readme Image](ReadMe-Images/Light_Mode/Login_Light.png)
 
@@ -40,6 +32,14 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
 ![Readme Image](ReadMe-Images/Dark_Mode/Billing_Dark.png)
 
 ![Readme Image](ReadMe-Images/Dark_Mode/Sales_Dark.png)<br><br>
+
+
+## Pages
+- Login-Page [Link](https://praashoo7.github.io/Figma-Front-End/index.html)<br>
+- Home-Page [Link](https://praashoo7.github.io/Figma-Front-End/HomePage.html)<br>
+- AddItems-Page [Link](https://praashoo7.github.io/Figma-Front-End/AddItemsPage.html)<br>
+- Billing-Page [Link](https://praashoo7.github.io/Figma-Front-End/Billing.html)<br>
+- Sales-Page [Link](https://praashoo7.github.io/Figma-Front-End/Sales.html)<br><br>
 
 
 ## License
