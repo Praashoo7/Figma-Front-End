@@ -42,6 +42,18 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
 - Sales-Page [Link](https://praashoo7.github.io/Figma-Front-End/Sales.html)<br><br>
 
 
+## Credits
+
+- Fonts
+  - Aesthetic Font from [FontSpace](https://www.fontspace.com/aesthetic-font-f76813) by Nirmana Visual.
+  - Brownhill Script Font from [FontSpace](https://www.fontspace.com/brownhill-script-font-f46547) by sizimon.
+  - Classy Vogue Font from [FontSpace](https://www.fontspace.com/classy-vogue-font-f76295) by variatype.
+
+- SVGS are from [svgrepo](https://www.svgrepo.com/).
+- Imgae is from [Unsplash](https://unsplash.com/) by Sehajpal Singh.
+- Background Image is from [transparentpatterns](https://www.transparenttextures.com/).
+
+
 ## License
 
 Figma-Front-End is open-source Software Licensed under the [MIT License](https://github.com/Praashoo7/Figma-Front-End/blob/main/LICENSE)
