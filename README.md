@@ -34,7 +34,7 @@ CSS and JS folder have separate CSS-JS files in them for each page. If you want 
 ![Readme Image](ReadMe-Images/Dark_Mode/Sales_Dark.png)<br>
 
 ## Separate Page Links
-- Login-Page [Link](https://praashoo7.github.io/Figma-Front-End/index.html)<br>
+- Login-Page [Link](https://htmlpreview.github.io/?https://github.com/Praashoo7/Figma-Front-End/blob/main/HomePage.html)<br>
 - Home-Page [Link](https://praashoo7.github.io/Figma-Front-End/HomePage.html)<br>
 - AddItems-Page [Link](https://praashoo7.github.io/Figma-Front-End/AddItemsPage.html)<br>
 - Billing-Page [Link](https://praashoo7.github.io/Figma-Front-End/Billing.html)<br>
