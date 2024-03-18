@@ -51,7 +51,8 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
 
 - SVGS are from [SVG Repo.](https://www.svgrepo.com/)
 - Login Image is from [Unsplash](https://unsplash.com/) by Sehajpal Singh.
-- Background texture is from [Transparent Textures.](https://www.transparenttextures.com/)<br><br>
+- Background texture is from [Transparent Textures.](https://www.transparenttextures.com/)<br>
+- Chart from [AMCHARTS.](https://www.amcharts.com/)<br><br>
 
 
 ## License
