@@ -848,82 +848,58 @@ body{
     scale: 0.995;
 }
 
+.switch_state{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 0.85em;
+    justify-content: end;
+    padding-right: 0.5em;
+    margin-top: -2em;
+    z-index: 99;
+}
+.switch_state_svg{
+    stroke: var(--black);
+    transition: .4s ease-in-out;
+}
+.switch_state_btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
-/* ------------------------------------------ TABLE-HOVER-FLICKER ------------------------------------------*/
 
-/*.table:hover .bulb_g{
-    animation: 3s flicker_bulb ease-in-out infinite;
+/* ------------------------------------------ SWITCH-STATE ------------------------------------------*/
+
+.bulb_running{
+    fill: rgb(50, 205, 50, 0.8);
+    filter: url(#green-glow);
+    transition: .4s ease-in-out;
 }
-.table:hover .table_top_g{
-    animation: 3s flicker_table ease-in-out infinite;
+.bulb_pending{
+    fill: rgb(255, 255, 0);
+    filter: url(#yellow-glow);
+    transition: .4s ease-in-out;
 }
-@keyframes flicker_bulb {
-    10%{
-        fill: rgb(50, 205, 50, 0.8);
-        filter: url(#green-glow);
-    }
-    40%{
-        fill: #808080;
-        filter: none;
-    }
-    50%{
-        fill: rgb(50, 205, 50, 0.8);
-        filter: url(#green-glow);
-    }
-    55%{
-        fill: #808080;
-        filter: none;
-    }
-    65%{
-        fill: rgb(50, 205, 50, 0.8);
-        filter: url(#green-glow);
-    }
-    80%{
-        fill: #808080;
-        filter: none;
-    }
-    90%{
-        fill: rgb(50, 205, 50, 0.8);
-        filter: url(#green-glow);
-    }
-    95%{
-        fill: #808080;
-        filter: none;
-    }
-    100%{
-        fill: rgb(50, 205, 50, 0.8);
-        filter: url(#green-glow);
-    }
+.bulb_off{
+    fill: #808080;
+    filter: none;
+    transition: .4s ease-in-out;
 }
-@keyframes flicker_table {
-    10%{
-        filter: url(#inset-shadow-g);
-    }
-    40%{
-        filter: none;
-    }
-    50%{
-        filter: url(#inset-shadow-g);
-    }
-    55%{
-        filter: none;
-    }
-    65%{
-        filter: url(#inset-shadow-g);
-    }
-    80%{
-        filter: none;
-    }
-    90%{
-        filter: url(#inset-shadow-g);
-    }
-    95%{
-        filter: none;
-    }
-    100%{
-        filter: url(#inset-shadow-g);
-    }
-}*/
+
+.table_top_running{
+    filter: url(#inset-shadow-g);
+    transition: .4s ease-in-out;
+}
+.table_top_pending{
+    filter: url(#inset-shadow-y);
+    transition: .4s ease-in-out;
+}
+.table_top_off{
+    filter: none;
+    transition: .4s ease-in-out;
+}
 
 
 /* ------------------------------------------ SVGS ------------------------------------------*/
@@ -940,23 +916,23 @@ svg{
 .bulb_g, .bulb_y{
     fill: #808080;
 }
-/*#table1:hover*/.bulb_g{
+/*#table1:hover .bulb_g{
     fill: rgb(50, 205, 50, 0.8);
     filter: url(#green-glow);
 }
-/*#table1:hover*/.table_top_g{
+#table1:hover .table_top_g{
     filter: url(#inset-shadow-g);
 }
-/*#table3:hover*/.bulb_y{
+#table3:hover .bulb_y{
     fill: rgb(255, 255, 0, 0.6);
     filter: url(#yellow-glow);
 }
-/*#table3:hover*/.table_top_y{
+#table3:hover .table_top_y{
     filter: url(#inset-shadow-y);
 }
 .bulb_off{
     fill: #808080;
-}
+}*/
 
 
 /* ------------------------------------------ MEDIA-QUERIES ------------------------------------------*/
