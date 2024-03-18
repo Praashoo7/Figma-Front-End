@@ -846,7 +846,7 @@ table {
     .custom_arrow_sales, .custom_arrow_bill {
         margin-right: 0.6em;
     }
-    .main{
+    main{
         row-gap: 0.5em;
     }
 }
