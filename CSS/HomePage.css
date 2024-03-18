@@ -411,6 +411,7 @@ main{
 }
 .switch_state_svg{
     stroke: var(--black);
+    transition: .4s ease-in-out;
 }
 .switch_state_btn{
     border: none;
@@ -425,24 +426,30 @@ main{
 .bulb_running{
     fill: rgb(50, 205, 50, 0.8);
     filter: url(#green-glow);
+    transition: .4s ease-in-out;
 }
 .bulb_pending{
     fill: rgb(255, 255, 0);
     filter: url(#yellow-glow);
+    transition: .4s ease-in-out;
 }
 .bulb_off{
     fill: #808080;
     filter: none;
+    transition: .4s ease-in-out;
 }
 
 .table_top_running{
     filter: url(#inset-shadow-g);
+    transition: .4s ease-in-out;
 }
 .table_top_pending{
     filter: url(#inset-shadow-y);
+    transition: .4s ease-in-out;
 }
 .table_top_off{
     filter: none;
+    transition: .4s ease-in-out;
 }
 
 
