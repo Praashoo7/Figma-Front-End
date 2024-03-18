@@ -2,6 +2,7 @@
   --bg-color : #DBC6B0;
   --border : #B8AA9C;
   --img-bg-color : #C7A684;
+  --img-bg-color-skeleton : #dabb9c;
   --black : black;
   --input-hover : rgb(197, 174, 150, 0.5);
   --accent0 : #DBC6B0;
@@ -44,6 +45,7 @@
   --bg-color : #28252D;
   --border : #444346;
   --img-bg-color : #36333A;
+  --img-bg-color-skeleton : #3f3d42;
   --black : #F2EBD9;
   --input-hover : rgba(95, 86, 105, 0.363);
   --accent0 : #DFC274;

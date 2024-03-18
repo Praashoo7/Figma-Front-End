@@ -2,6 +2,11 @@
 var currentPage = window.location.pathname + window.location.search;
 console.log("Current Path : ",currentPage);
 
+window.addEventListener("load", function () {
+    skeletonAnimation.style.opacity = 0;
+    main_image.style.opacity = 0.2;
+});
+
 if (currentPage === "/Login.html") {
 
     /*-------------------------------------------------- LOGIN --------------------------------------------------*/

@@ -13,3 +13,8 @@ passwordToggleBtn.addEventListener('click', function() {
     i.classList.remove('animateEye');
   }
 });
+
+window.addEventListener("load", function () {
+  skeletonAnimation.style.opacity = 0;
+  main_image.style.opacity = 0.2;
+});

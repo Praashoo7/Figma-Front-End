@@ -128,6 +128,35 @@ body{
     transition: .4s ease-in-out;
 }
 
+.skeletonAnimation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--img-bg-color) 25%, var(--img-bg-color-skeleton) 50%, var(--img-bg-color) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite linear;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .main_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
 .image_wrapper {
     position: relative;
     margin: auto;
@@ -140,13 +169,6 @@ body{
     transition: .4s ease-in-out;
   }
   
-  .image_wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.2;
-    transition: .4s ease-in-out;
-  }
   .heading_text1{
     position: absolute;
     font-family: AestheticRegular;
@@ -2749,6 +2771,7 @@ table {
     --bg-color : #DBC6B0;
     --border : #B8AA9C;
     --img-bg-color : #C7A684;
+    --img-bg-color-skeleton : #dabb9c;
     --black : black;
     --input-hover : rgb(197, 174, 150, 0.5);
     --accent0 : #DBC6B0;
@@ -2791,6 +2814,7 @@ table {
     --bg-color : #28252D;
     --border : #444346;
     --img-bg-color : #36333A;
+    --img-bg-color-skeleton : #3f3d42;
     --black : #F2EBD9;
     --input-hover : rgba(95, 86, 105, 0.363);
     --accent0 : #DFC274;
