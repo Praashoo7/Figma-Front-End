@@ -467,23 +467,23 @@ svg{
 .bulb_g, .bulb_y{
     fill: #808080;
 }
-/*#table1:hover*/.bulb_g{
+/*#table1:hover .bulb_g{
     fill: rgb(50, 205, 50, 0.8);
     filter: url(#green-glow);
 }
-/*#table1:hover*/.table_top_g{
+#table1:hover .table_top_g{
     filter: url(#inset-shadow-g);
 }
-/*#table3:hover*/.bulb_y{
+#table3:hover .bulb_y{
     fill: rgb(255, 255, 0, 0.6);
     filter: url(#yellow-glow);
 }
-/*#table3:hover*/.table_top_y{
+#table3:hover .table_top_y{
     filter: url(#inset-shadow-y);
 }
 .bulb_off{
     fill: #808080;
-}
+}*/
 
 
 /* ------------------------------------------ SMALL-DEVICE ------------------------------------------*/
