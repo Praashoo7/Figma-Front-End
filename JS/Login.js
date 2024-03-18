@@ -18,3 +18,17 @@ window.addEventListener("load", function () {
   skeletonAnimation.style.opacity = 0;
   main_image.style.opacity = 0.2;
 });
+
+function redirectToHomePage() {
+
+  var BtnText = document.getElementById("login_btn_text");
+  var loading = document.getElementById("load");
+
+  BtnText.style.opacity = 0;
+  loading.style.opacity = 1;
+
+  setTimeout(() => {
+    window.location.href = 'HomePage.html';
+  }, 1500);
+
+}

@@ -1,15 +1,19 @@
-// Check the URL of the page to determine which page is being loaded
 var currentPage = window.location.pathname + window.location.search;
 console.log("Current Path : ",currentPage);
+
+/* ------------------------- SKELETON-ANIMATION-FOR-IMAGE ------------------------- */
 
 window.addEventListener("load", function () {
     skeletonAnimation.style.opacity = 0;
     main_image.style.opacity = 0.2;
 });
 
-if (currentPage === "/Login.html") {
 
-    /*-------------------------------------------------- LOGIN --------------------------------------------------*/
+/* ------------------------- JS-FOR-EACH-PAGE ------------------------- */
+
+if (currentPage === "/SINGLE-CSS-JS/Login.html") {
+
+/* ------------------------- SKELETON-ANIMATION-FOR-IMAGE ------------------------- */
 
     const passwordToggleBtn = document.getElementById('passwordHideButton');
     const passwordInput = document.getElementById('password');
@@ -27,8 +31,22 @@ if (currentPage === "/Login.html") {
     }
     });
 
+    function redirectToHomePage() {
+
+        var BtnText = document.getElementById("login_btn_text");
+        var loading = document.getElementById("load");
+      
+        BtnText.style.opacity = 0;
+        loading.style.opacity = 1;
+      
+        setTimeout(() => {
+          window.location.href = 'HomePage.html';
+        }, 1500);
+      
+    }
+
 } 
-else if (currentPage === "/HomePage.html") {
+else if (currentPage === "/SINGLE-CSS-JS/HomePage.html") {
 
     /*-------------------------------------------------- HOMEPAGE --------------------------------------------------*/
     /*------------------------- CUSTOM-DROPDOWN -------------------------*/
@@ -66,7 +84,7 @@ else if (currentPage === "/HomePage.html") {
     });
 
 }
-else if (currentPage === "/AddItemsPage.html") {
+else if (currentPage === "/SINGLE-CSS-JS/AddItemsPage.html") {
     
     /*-------------------------------------------------- ADDITEMSPAGE --------------------------------------------------*/
 
@@ -159,7 +177,7 @@ else if (currentPage === "/AddItemsPage.html") {
     window.addEventListener('resize', matchWidth);
 
 }
-else if (currentPage === "/Billing.html") {
+else if (currentPage === "/SINGLE-CSS-JS/Billing.html") {
 
     /*-------------------------------------------------- BILLING --------------------------------------------------*/
 
@@ -189,7 +207,7 @@ else if (currentPage === "/Billing.html") {
     }
     
 }
-else if (currentPage === "/Sales.html") {
+else if (currentPage === "/SINGLE-CSS-JS/Sales.html") {
 
     /*-------------------------------------------------- SALES --------------------------------------------------*/
 
