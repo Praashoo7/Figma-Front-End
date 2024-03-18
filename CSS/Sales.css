@@ -776,13 +776,10 @@ table {
 }
 @media screen and (max-width: 370px) {
     .stats_list{
-        padding: 2em 1em 2em 1em;
+        padding: 2em 0.5em 2em 0.5em;
     }
     .stats{
         gap: 0.65em;
-    }
-    .stats_data{
-        font-size: 0.7em;
     }
     .stats_icon{
         padding: 0.55em;
