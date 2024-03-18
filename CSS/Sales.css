@@ -78,7 +78,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    margin: 0em 1.5em 1.25em 1.5em;
+    margin: 0 1.5em 1.5em 1.5em;
 }
 
 
@@ -845,6 +845,9 @@ table {
     }
     .custom_arrow_sales, .custom_arrow_bill {
         margin-right: 0.6em;
+    }
+    .main{
+        row-gap: 0.5em;
     }
 }
 @media screen and (max-width: 279px) {

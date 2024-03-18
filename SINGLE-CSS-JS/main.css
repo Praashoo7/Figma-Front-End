@@ -2659,9 +2659,6 @@ table {
     .stats{
         gap: 0.65em;
     }
-    .stats_data{
-        font-size: 0.7em;
-    }
     .stats_icon{
         padding: 0.55em;
         border-radius: 10px;
