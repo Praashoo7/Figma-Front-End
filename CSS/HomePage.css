@@ -403,14 +403,14 @@ main{
     position: relative;
     display: flex;
     width: 100%;
-    height: 0.85em;
+    height: 0.75em;
     justify-content: end;
     padding-right: 0.5em;
     margin-top: -2em;
     z-index: 99;
 }
 .switch_state_svg{
-    stroke: var(--black);
+    fill: var(--black);
     transition: .4s ease-in-out;
 }
 .switch_state_btn{
