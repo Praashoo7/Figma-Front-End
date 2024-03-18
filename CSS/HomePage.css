@@ -59,7 +59,7 @@ body{
     background-color: var(--bg-color);
     font-family: ClassyVogue;
     background-image: url(imgs/batthern.png);
-    animation:transitionIn 0.4s;
+    animation:transitionIn 0.75s;
     transition: .4s ease-in-out;
 }
 @keyframes transitionIn{
