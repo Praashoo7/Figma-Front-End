@@ -773,7 +773,7 @@ body{
     padding: 0;
     margin: 0.4em 1em 0 0;
     border: 2px solid var(--border);
-    background-color: var(--img-bg-color);
+    background-color: var(--bottom-bar-bg);
     box-shadow: 0 0.125rem 0.5rem var(--lighter-drop-shadow);
     border-radius: 10px;
     overflow: hidden;
