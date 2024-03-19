@@ -867,6 +867,10 @@ body{
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.switch_state_btn:hover{
+    opacity: 0.5;
 }
 
 
