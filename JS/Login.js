@@ -39,8 +39,11 @@ function redirectToHomePage() {
 
   setTimeout(() => {
     window.location.href = 'HomePage.html';
+  }, 1500);
+
+  setTimeout(() => {
     document.getElementById("login_btn_text").style.display = "block";
     document.getElementById("load").style.display = "none";
-  }, 1500);
+  }, 200);
 
 }
