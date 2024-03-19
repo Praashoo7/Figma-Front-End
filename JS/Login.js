@@ -19,12 +19,15 @@ window.addEventListener("load", function () {
   main_image.style.opacity = 0.2;
 });
 
+
+let changesMade = false;
+
 function redirectToHomePage() {
 
   var BtnText = document.getElementById("login_btn_text");
   var loading = document.getElementById("load");
 
-  if (BtnText.innerText === "Login") {
+  if (!changesMade) {
 
       BtnText.style.opacity = 0;
       loading.style.opacity = 1;
@@ -43,6 +46,8 @@ function redirectToHomePage() {
         window.location.href = 'HomePage.html';
       }, 1500);
 
+      changesMade = true;
+
   }
   else
   {
@@ -54,7 +59,7 @@ function redirectToHomePage() {
       document.getElementById("login_btn_text").style.opacity = 1; // Reset opacity
 
       // Reset the button text
-      BtnText.innerText = "Login";
+      changesMade = false;
   }
 
 }
