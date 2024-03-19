@@ -20,15 +20,20 @@ window.addEventListener("load", function () {
 });
 
 
-let changesMade = false;
-
 function redirectToHomePage() {
-
   var BtnText = document.getElementById("login_btn_text");
   var loading = document.getElementById("load");
 
-  if (!changesMade) {
-
+  // Check if the page is being loaded for the first time or being shown again after navigation
+  if (history && history.state && history.state.reset) {
+      // Reset changes if the page is being shown again after navigation
+      BtnText.style.opacity = 1;
+      loading.style.opacity = 0;
+      document.getElementById("load").style.display = "none";
+      document.getElementById("load").style.opacity = 0;
+      document.getElementById("login_btn_text").style.display = "block";
+      document.getElementById("login_btn_text").style.opacity = 1;
+  } else {
       BtnText.style.opacity = 0;
       loading.style.opacity = 1;
 
@@ -39,27 +44,11 @@ function redirectToHomePage() {
 
       document.getElementById("login_btn_text").style.display = "none";
       setTimeout(() => {
-        document.getElementById("login_btn_text").style.opacity = 0;
+          document.getElementById("login_btn_text").style.opacity = 0;
       }, 400);
 
       setTimeout(() => {
-        window.location.href = 'HomePage.html';
+          window.location.href = 'HomePage.html';
       }, 1500);
-
-      changesMade = true;
-
   }
-  else
-  {
-      BtnText.style.opacity = 1; // Reset opacity
-      loading.style.opacity = 0; // Reset opacity
-      document.getElementById("load").style.display = "none"; // Reset display
-      document.getElementById("load").style.opacity = 0; // Reset opacity
-      document.getElementById("login_btn_text").style.display = "block"; // Reset display
-      document.getElementById("login_btn_text").style.opacity = 1; // Reset opacity
-
-      // Reset the button text
-      changesMade = false;
-  }
-
 }
