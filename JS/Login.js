@@ -38,11 +38,28 @@ function redirectToHomePage() {
   }, 400);
 
   setTimeout(() => {
-      window.location.href = 'HomePage.html';
+    window.location.href = 'HomePage.html';
   }, 1500);
-}
 
-if (!sessionStorage.getItem('pageReloaded')) {
-  sessionStorage.setItem('pageReloaded', 'true');
-  window.location.reload(true);
+  setTimeout(() => {
+    BtnText.style.opacity = 1;
+    loading.style.opacity = 0;
+
+    document.getElementById("load").style.display = "none";
+    setTimeout(() => {
+        document.getElementById("load").style.opacity = 0;
+    }, 400);
+
+    document.getElementById("login_btn_text").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("login_btn_text").style.opacity = 1;
+    }, 400);
+  }, 1500)
+
+  setTimeout(() => {
+    window.location.href = 'HomePage.html';
+    document.getElementById("login_btn_text").style.display = "block";
+    document.getElementById("load").style.display = "none";
+  }, 1700);
+
 }
