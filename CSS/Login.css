@@ -338,8 +338,8 @@ main{
 /* ------------------------------------------ BUTTON-LOADING-ANIMATION ------------------------------------------*/
 
 .load {
-    position: absolute;
-    display: flex;
+    position: relative;
+    display: none;
     border-radius: 50%;
     flex-direction: row;
     opacity: 0;
