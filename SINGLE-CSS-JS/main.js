@@ -66,7 +66,7 @@ if (currentPage === "/SINGLE-CSS-JS/Login.html") {
           setTimeout(() => {
             document.getElementById("login_btn_text").style.opacity = 1;
           }, 400);
-        }, 1500)
+        }, 1700)
       
       }
 
