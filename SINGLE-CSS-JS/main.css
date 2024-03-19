@@ -2584,12 +2584,15 @@ table {
 /* ------------------------------------------ BUTTON-LOADING-ANIMATION ------------------------------------------*/
 
 .load {
-    position: absolute;
+    position: relative;
     display: flex;
     border-radius: 50%;
     flex-direction: row;
     opacity: 0;
-    transition: .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  #login_btn_text{
+    transition: all .4s ease-in-out;
   }
   
   .progress {

@@ -56,10 +56,4 @@ function redirectToHomePage() {
     }, 400);
   }, 1500)
 
-  setTimeout(() => {
-    window.location.href = 'HomePage.html';
-    document.getElementById("login_btn_text").style.display = "block";
-    document.getElementById("load").style.display = "none";
-  }, 1700);
-
 }
