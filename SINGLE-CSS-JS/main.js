@@ -1,7 +1,8 @@
-var currentPage = window.location.pathname + window.location.search;
-console.log("Current Path : ",currentPage);
+var path = window.location.pathname;
+var currentPage = path.split("/").pop();
+console.log( currentPage );
 
-/* ------------------------- SKELETON-ANIMATION-FOR-IMAGE ------------------------- */
+/* ------------------------- SKELETON-ANIMATION-FOR-LOGIN-IMAGE ------------------------- */
 
 window.addEventListener("load", function () {
     skeletonAnimation.style.opacity = 0;
@@ -11,9 +12,10 @@ window.addEventListener("load", function () {
 
 /* ------------------------- JS-FOR-EACH-PAGE ------------------------- */
 
-if (currentPage === "/SINGLE-CSS-JS/Login.html") {
+if (currentPage === "Login.html") {
 
-/* ------------------------- SKELETON-ANIMATION-FOR-IMAGE ------------------------- */
+
+    /*------------------------- PASSWORD-HIDE -------------------------*/
 
     const passwordToggleBtn = document.getElementById('passwordHideButton');
     const passwordInput = document.getElementById('password');
@@ -30,6 +32,9 @@ if (currentPage === "/SINGLE-CSS-JS/Login.html") {
         i.classList.remove('animateEye');
     }
     });
+
+
+    /*------------------------- LOGIN-BUTTON-ANIMATION -------------------------*/
 
     function redirectToHomePage() {
 
@@ -71,7 +76,7 @@ if (currentPage === "/SINGLE-CSS-JS/Login.html") {
       }
 
 } 
-else if (currentPage === "/SINGLE-CSS-JS/HomePage.html") {
+else if (currentPage === "HomePage.html") {
 
     /*-------------------------------------------------- HOMEPAGE --------------------------------------------------*/
     /*------------------------- CUSTOM-DROPDOWN -------------------------*/
@@ -108,6 +113,9 @@ else if (currentPage === "/SINGLE-CSS-JS/HomePage.html") {
         });
     });
 
+
+    /*------------------------- SWITCH-STATE -------------------------*/
+
     function switchState(event,switchNumber) {
         event.stopPropagation();
         const bulb = document.getElementById(`bulb${switchNumber}`);
@@ -140,7 +148,7 @@ else if (currentPage === "/SINGLE-CSS-JS/HomePage.html") {
     }
 
 }
-else if (currentPage === "/SINGLE-CSS-JS/AddItemsPage.html") {
+else if (currentPage === "AddItemsPage.html") {
     
     /*-------------------------------------------------- ADDITEMSPAGE --------------------------------------------------*/
 
@@ -233,7 +241,7 @@ else if (currentPage === "/SINGLE-CSS-JS/AddItemsPage.html") {
     window.addEventListener('resize', matchWidth);
 
 }
-else if (currentPage === "/SINGLE-CSS-JS/Billing.html") {
+else if (currentPage === "Billing.html") {
 
     /*-------------------------------------------------- BILLING --------------------------------------------------*/
 
@@ -263,7 +271,7 @@ else if (currentPage === "/SINGLE-CSS-JS/Billing.html") {
     }
     
 }
-else if (currentPage === "/SINGLE-CSS-JS/Sales.html") {
+else if (currentPage === "Sales.html") {
 
     /*-------------------------------------------------- SALES --------------------------------------------------*/
 
