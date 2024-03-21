@@ -135,6 +135,7 @@ main{
     position: absolute;
     font-family: AestheticRegular;
     font-size: 6.5em;
+    color: var(--black);
   }
   .heading_text2{
     position: absolute;
@@ -143,6 +144,7 @@ main{
     margin-top: 0.85em;
     margin-right: 0.4em;
     opacity: 0.4;
+    color: var(--black);
   }
 
 /* ------------------------------ RIGHT ------------------------------ */
