@@ -254,6 +254,7 @@ body{
     font-family: ClassyVogue;
     border: none;
     border-bottom: 2px solid var(--border);
+    color: var(--black);
     outline: none;
     background-color: transparent;
     transition: .4s ease-in-out;
