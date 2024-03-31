@@ -490,40 +490,40 @@ if (currentTheme) {
             // Set data
             var data = [{
             month: "January",
-            value: 14000
+            value: 140000
             }, {
             month: "February",
-            value: 7820
+            value: 78020
             }, {
             month: "March",
-            value: 9050
+            value: 90050
             }, {
             month: "April",
-            value: 10500
+            value: 100500
             }, {
             month: "May",
-            value: 26100
+            value: 260100
             }, {
             month: "June",
-            value: 12100
+            value: 120100
             }, {
             month: "July",
-            value: 11650
+            value: 110650
             }, {
             month: "August",
-            value: 20350
+            value: 200350
             }, {
             month: "September",
-            value: 10010
+            value: 100010
             }, {
             month: "October",
-            value: 15050
+            value: 150050
             }, {
             month: "November",
-            value: 22500
+            value: 220500
             }, {
             month: "December",
-            value: 26800
+            value: 260800
             }];
             
             xAxis.data.setAll(data);
@@ -664,40 +664,40 @@ if (currentTheme) {
     // Set data
     var data = [{
     month: "January",
-    value: 14000
+    value: 140000
     }, {
     month: "February",
-    value: 7820
+    value: 78020
     }, {
     month: "March",
-    value: 9050
+    value: 90050
     }, {
     month: "April",
-    value: 10500
+    value: 100500
     }, {
     month: "May",
-    value: 26100
+    value: 260100
     }, {
     month: "June",
-    value: 12100
+    value: 120100
     }, {
     month: "July",
-    value: 11650
+    value: 110650
     }, {
     month: "August",
-    value: 20350
+    value: 200350
     }, {
     month: "September",
-    value: 10010
+    value: 100010
     }, {
     month: "October",
-    value: 15050
+    value: 150050
     }, {
     month: "November",
-    value: 22500
+    value: 220500
     }, {
     month: "December",
-    value: 26800
+    value: 260800
     }];
     
     xAxis.data.setAll(data);
