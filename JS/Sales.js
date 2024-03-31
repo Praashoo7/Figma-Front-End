@@ -144,7 +144,7 @@ if (currentTheme) {
             
             var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
             maxDeviation: 0.3,
-            categoryField: "country",
+            categoryField: "month",
             renderer: xRenderer,
             }));
             
@@ -176,9 +176,9 @@ if (currentTheme) {
             yAxis: yAxis,
             valueYField: "value",
             sequencedInterpolation: true,
-            categoryXField: "country",
+            categoryXField: "month",
             tooltip: am5.Tooltip.new(root, {
-                labelText: "{country} : {valueY} Rupees",
+                labelText: "{month} : {valueY} Rupees",
                 getFillFromSprite: true,
                 getStrokeFromSprite: true,
                 autoTextColor: true,
@@ -194,7 +194,7 @@ if (currentTheme) {
             cornerRadiusTR: 5
             });
             var tooltip = am5.Tooltip.new(root, {
-            labelText: "[fontFamily: ClassyVogue]{country} : {valueY} ₹",
+            labelText: "[fontFamily: ClassyVogue]{month} : {valueY} ₹",
             });
         
             tooltip.get("background").setAll({
@@ -213,40 +213,40 @@ if (currentTheme) {
         
             // Set data
             var data = [{
-            country: "January",
+            month: "January",
             value: 14000
             }, {
-            country: "February",
+            month: "February",
             value: 7820
             }, {
-            country: "March",
+            month: "March",
             value: 9050
             }, {
-            country: "April",
+            month: "April",
             value: 10500
             }, {
-            country: "May",
+            month: "May",
             value: 26100
             }, {
-            country: "June",
+            month: "June",
             value: 12100
             }, {
-            country: "July",
+            month: "July",
             value: 11650
             }, {
-            country: "August",
+            month: "August",
             value: 20350
             }, {
-            country: "September",
+            month: "September",
             value: 10010
             }, {
-            country: "October",
+            month: "October",
             value: 15050
             }, {
-            country: "November",
+            month: "November",
             value: 22500
             }, {
-            country: "December",
+            month: "December",
             value: 26800
             }];
             
@@ -318,7 +318,7 @@ if (currentTheme) {
     
     var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
     maxDeviation: 0.3,
-    categoryField: "country",
+    categoryField: "month",
     renderer: xRenderer,
     }));
     
@@ -350,9 +350,9 @@ if (currentTheme) {
     yAxis: yAxis,
     valueYField: "value",
     sequencedInterpolation: true,
-    categoryXField: "country",
+    categoryXField: "month",
     tooltip: am5.Tooltip.new(root, {
-        labelText: "{country} : {valueY} Rupees",
+        labelText: "{month} : {valueY} Rupees",
         getFillFromSprite: true,
         getStrokeFromSprite: true,
         autoTextColor: true,
@@ -368,7 +368,7 @@ if (currentTheme) {
     cornerRadiusTR: 5
     });
     var tooltip = am5.Tooltip.new(root, {
-    labelText: "[fontFamily: ClassyVogue]{country} : {valueY} ₹",
+    labelText: "[fontFamily: ClassyVogue]{month} : {valueY} ₹",
     });
 
     tooltip.get("background").setAll({
@@ -387,40 +387,40 @@ if (currentTheme) {
 
     // Set data
     var data = [{
-    country: "January",
+    month: "January",
     value: 14000
     }, {
-    country: "February",
+    month: "February",
     value: 7820
     }, {
-    country: "March",
+    month: "March",
     value: 9050
     }, {
-    country: "April",
+    month: "April",
     value: 10500
     }, {
-    country: "May",
+    month: "May",
     value: 26100
     }, {
-    country: "June",
+    month: "June",
     value: 12100
     }, {
-    country: "July",
+    month: "July",
     value: 11650
     }, {
-    country: "August",
+    month: "August",
     value: 20350
     }, {
-    country: "September",
+    month: "September",
     value: 10010
     }, {
-    country: "October",
+    month: "October",
     value: 15050
     }, {
-    country: "November",
+    month: "November",
     value: 22500
     }, {
-    country: "December",
+    month: "December",
     value: 26800
     }];
     
