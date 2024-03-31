@@ -391,7 +391,7 @@ main{
     border: 3px solid var(--border);
     filter: var(--drop-shadow1);
     border-radius: 15px;
-    transition: .4s ease-in-out;
+    transition: .2s ease-in-out;
     cursor: pointer;
 }
 .table:hover{
