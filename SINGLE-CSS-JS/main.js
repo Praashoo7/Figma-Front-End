@@ -411,7 +411,7 @@ if (currentTheme) {
             centerX: am5.p100,
             paddingRight: 15,
             fontFamily: "ClassyVogue",
-            fill: am5.color("#FFFFFF")
+            fill: am5.color("#F2EBD9")
             });
             
             xRenderer.grid.template.setAll({
@@ -432,7 +432,7 @@ if (currentTheme) {
             yRenderer.labels.template.setAll({
             paddingRight: 20,
             fontFamily: "ClassyVogue",
-            fill: am5.color("#FFFFFF")
+            fill: am5.color("#F2EBD9")
             });
             yRenderer.grid.template.setAll({
                 opacity:0
