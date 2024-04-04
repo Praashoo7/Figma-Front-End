@@ -4,7 +4,6 @@ While learning Figma, I Designed a Restro/Hotel Management Website for a friend'
 
 If you prefer single CSS and JS files instead of separate ones for each page, you can find them [here.](https://github.com/Praashoo7/Figma-Front-End/tree/main/SINGLE-CSS-JS)<br><br>
 
-⭐ Start it if you Like it!<br><br>
 
 ## Figma Link
 
