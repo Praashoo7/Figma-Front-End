@@ -602,6 +602,11 @@ svg{
         letter-spacing: 0.1em;
     }
 }
+@media screen and (max-width: 425px) {
+    .tables{
+        min-height: 82dvh;
+    }
+}
 @media screen and (max-width: 279px) {
     .small_device{
         display: flex;
