@@ -23,7 +23,7 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
 
 
 ## Dark Mode
-![Readme Image](ReadMe-Images/Dark_Mode/Login_Dark.png)
+![Readme Image](ReadMe-Images/Dark_Mode/Login_Dark1.png)
 
 ![Readme Image](ReadMe-Images/Dark_Mode/HomePage_Dark.png)
 
