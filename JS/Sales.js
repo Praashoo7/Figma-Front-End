@@ -14,6 +14,29 @@ $( function() {
 } );
 
 
+/*------------------------- COLLAPSIBLE -------------------------*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('.content-inner');
+    var col = document.querySelector(".collapsible");
+
+    elements.forEach(function(element) {
+        element.addEventListener('click', function() {
+            this.classList.toggle('opened');
+            var innerContent = this.querySelector('.collapsible');
+
+            if (this.classList.contains('opened')) {
+                innerContent.style.padding = "1.5em 2.65em 0.5em 2.5em";
+                innerContent.style.backgroundColor = "var(--collapsible1-hover)";
+            } else {
+                innerContent.style.padding = "1em";
+                innerContent.style.backgroundColor = null;
+            }
+        });
+    });
+});
+
+
 /*------------------------- CUSTOM-DROPDOWN -------------------------*/
 
 document.addEventListener('DOMContentLoaded', function () {

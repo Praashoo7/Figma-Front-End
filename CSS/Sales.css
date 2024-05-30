@@ -545,7 +545,7 @@ table {
     justify-content: space-between;
     outline: none;
     font-size: 1.25em;
-    transition: .2s ease-in-out;
+    transition: .3s ease-in-out;
     background-color: var(--collapsible1);
 }
 .collapsible::after{
@@ -555,18 +555,10 @@ table {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-top: 8px solid #B59A7E;
-    transition: .2s ease-in-out;
+    transition: .3s ease-in-out;
 }
 .collapsible:hover {
     background-color: var(--collapsible1-hover);
-}
-.active{
-    background-color: var(--collapsible1-hover);
-    border-radius: 10px 10px 0 0;
-    padding: 1.5em 0 0.5em 2.5em;
-}
-.collapsible.active::after {
-    margin-right: 2.65em;
 }
   
 
@@ -604,7 +596,18 @@ table {
     margin: 0 1em 0.5em 1em;
     border-radius: 15px;
     overflow: hidden;
+    max-height: 4.35em;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
 }
+.opened{
+    max-height: 50em;
+}
+
 .content {
     width: 100%;
     padding: 0 18px;
@@ -612,14 +615,8 @@ table {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    max-height: 0;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
     background-color: var(--collapsible1-hover);
 }
 
