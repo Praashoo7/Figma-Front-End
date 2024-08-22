@@ -578,16 +578,16 @@ body{
 .account_menu{
     opacity: 0;
     position: absolute;
-    margin-top: 13em;
+    margin-top: 12.5em;
     margin-right: -0.75em;
     display: none;
     flex-direction: column;
     row-gap: .25em;
     align-items: end;
-    padding: 0 0.7em 0 0.7em;
+    padding: 0.7em 0.7em 0.7em 0.7em;
     justify-content: center;
     width: 190px;
-    height: 150px;
+    height: max-content;
     border: 1px solid var(--border);
     background-color: var(--bg-color);
     border-radius: 15px;
@@ -599,7 +599,7 @@ body{
     width: 100%;
     border: 1px solid var(--border);
 }
-.sales, .logout{
+.sales, .logout, .starongit{
     width: 100%;
     display: flex;
     align-items: center;
@@ -615,6 +615,19 @@ body{
     background-color: var(--button-focus-hover);
     letter-spacing: 0.15em;
 }
+.starongit:hover{
+    background-color: var(--button-focus-hover);
+    letter-spacing: 0.05em;
+}
+.star{
+    width: 16px;
+    height: 16px;
+    transition: .2s ease-in-out;
+}
+/* .starongit:hover .star{
+    fill: yellow;
+    filter: url(#sofGlow);
+} */
 
 
 /* ------------------------------------------ MAIN-TITLE ------------------------------------------*/
@@ -851,6 +864,24 @@ body{
     scale: 0.995;
 }
 
+.addTable{
+    width: 100%;
+    height: 3.5em;
+    background-color: transparent;
+    border: 3px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    font-family: ClassyVogue;
+    color: var(--black);
+    font-size: 1.2em;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+.addTable:hover{
+    color: black;
+    background-color: var(--accent2)
+}
+
 .switch_state{
     position: relative;
     display: flex;
@@ -1025,19 +1056,31 @@ svg{
     }
     .account_menu{
         width: 100px;
-        height: 75px;
-        margin-top: 7em;
+        height: 100px;
+        margin-top: 9em;
         border-radius: 10px;
         margin-right: 0.85em;
         row-gap: 0.1em;
     }
-    .sales, .logout{
+    .sales, .logout, .starongit{
         font-size: 0.75em;
         padding: 0.1em 0.25em 0.1em 0.1em;
         border-radius: 3px;
     }
     .sales:hover, .logout:hover{
         letter-spacing: 0.1em;
+    }
+    .star{
+        width: 12px;
+        height: 12px;
+        padding-bottom: 0.2em;
+    }
+    .starongit:hover{
+        letter-spacing: 0.05em;
+    }
+    .starongit:hover .star{
+        fill: yellow;
+        filter: url(#sofGlow);
     }
 }
 @media screen and (max-width: 425px) {
