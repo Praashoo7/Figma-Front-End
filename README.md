@@ -1,8 +1,8 @@
-# [Restro/Hotel Management Website](https://praashoo7.github.io/Figma-Front-End/)
+# [Restro/Hotel Management Website](https://praashoo7.github.io/Figma-Front-End-00/)
 
-While learning Figma, I Designed a Restro/Hotel Management Website for a friend's Project. Afterwards, I developed the front-end for it. This is just the Front-End code. You can navigate through the Webpages by just pressing Buttons From this [Site Link.](https://praashoo7.github.io/Figma-Front-End/) You can see the Screenshot of the Pages below.<br>
+While learning Figma, I Designed a Restro/Hotel Management Website for a friend's Project. Afterwards, I developed the basic front-end for it. You can navigate through the Webpages by just pressing dummy buttons From this [Site Link.](https://praashoo7.github.io/Figma-Front-End-00/) You can see the Screenshot of the Pages below.<br>
 
-If you prefer single CSS and JS files instead of separate ones for each page, you can find them [here.](https://github.com/Praashoo7/Figma-Front-End/tree/main/SINGLE-CSS-JS)<br><br>
+If you prefer single CSS and JS files instead of separate ones for each page, you can find them [here.](https://github.com/Praashoo7/Figma-Front-End-00/tree/main/SINGLE-CSS-JS)<br><br>
 
 
 ## Figma Link
@@ -35,11 +35,11 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
 
 
 ## Pages
-- Login-Page [Link](https://praashoo7.github.io/Figma-Front-End/index.html)<br>
-- Home-Page [Link](https://praashoo7.github.io/Figma-Front-End/HomePage.html)<br>
-- AddItems-Page [Link](https://praashoo7.github.io/Figma-Front-End/AddItemsPage.html)<br>
-- Billing-Page [Link](https://praashoo7.github.io/Figma-Front-End/Billing.html)<br>
-- Sales-Page [Link](https://praashoo7.github.io/Figma-Front-End/Sales.html)<br><br>
+- Login-Page [Link](https://praashoo7.github.io/index.html)<br>
+- Home-Page [Link](https://praashoo7.github.io/HomePage.html)<br>
+- AddItems-Page [Link](https://praashoo7.github.io/AddItemsPage.html)<br>
+- Billing-Page [Link](https://praashoo7.github.io/Billing.html)<br>
+- Sales-Page [Link](https://praashoo7.github.io/Sales.html)<br><br>
 
 
 ## Credits
@@ -57,4 +57,4 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
 
 ## License
 
-Figma-Front-End is open-source Software Licensed under the [MIT License](https://github.com/Praashoo7/Figma-Front-End/blob/main/LICENSE)
+Figma-Front-End is open-source Software Licensed under the [MIT License](https://github.com/Praashoo7/Figma-Front-End-00/blob/main/LICENSE)
