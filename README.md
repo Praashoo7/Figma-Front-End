@@ -57,4 +57,4 @@ If you prefer single CSS and JS files instead of separate ones for each page, yo
 
 ## License
 
-Figma-Front-End is open-source Software Licensed under the [MIT License](https://github.com/Praashoo7/Figma-Front-End-00/blob/main/LICENSE)
+Figma-Front-End-00 is open-source Software Licensed under the [MIT License](https://github.com/Praashoo7/Figma-Front-End-00/blob/main/LICENSE)
